@@ -1,0 +1,237 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2784936528883728223
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2784936528883728192}
+  - component: {fileID: 2784936528883728193}
+  - component: {fileID: 2784936528883728194}
+  m_Layer: 0
+  m_Name: HurtBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &2784936528883728192
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2784936528883728223}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2789725317114581087}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2784936528883728193
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2784936528883728223}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.9799011, z: 0.47742462}
+  m_Center: {x: 0, y: 0.49912578, z: 0.5493734}
+--- !u!114 &2784936528883728194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2784936528883728223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29b9ca2a1f901d4a819e7663ece464e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &2784936530229933408
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2784936530229933411}
+  - component: {fileID: 2784936530229933410}
+  - component: {fileID: 2784936530229933409}
+  - component: {fileID: 2784936530229933412}
+  - component: {fileID: 2784936530229933413}
+  m_Layer: 0
+  m_Name: yellowHermit
+  m_TagString: Enemy
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2784936530229933411
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2784936530229933408}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.5153747, y: 0, z: 3.693}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2789725317114581087}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!195 &2784936530229933410
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2784936530229933408}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &2784936530229933409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2784936530229933408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d78dd450446f66446b71b7a1700ab60d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patrolPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  currentPatrolPoint: 0
+  agent: {fileID: 2784936530229933410}
+  anim: {fileID: 2879108680795648617}
+  currentState: 0
+  waitAtPoint: 2
+  chaseRange: 6
+  attackRange: 1
+  timeBetweenAttacks: 2
+--- !u!114 &2784936530229933412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2784936530229933408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a792cecd13d8e1e4daab72eeec991ecc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 2
+  deathSound: 6
+  deathEffect: {fileID: 9075779683149004032, guid: df47e7cbc55d30b4992f24e9769c699f, type: 3}
+  itemToDrop: {fileID: 8714933507198256491, guid: a725845a4a2bb0941b0f0b746065ce1e, type: 3}
+--- !u!65 &2784936530229933413
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2784936530229933408}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6779566, y: 0.16431653, z: 0.76763916}
+  m_Center: {x: -0.010191202, y: 0.9437104, z: 0.030573606}
+--- !u!1001 &2784936529419015895
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2784936530229933411}
+    m_Modifications:
+    - target: {fileID: 1121373611740912, guid: 0b23288a475856d4cae7fb3b78cd9a03, type: 3}
+      propertyPath: m_Name
+      value: Polygonal Robot Hermit Yellow
+      objectReference: {fileID: 0}
+    - target: {fileID: 4799787509532296, guid: 0b23288a475856d4cae7fb3b78cd9a03, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4799787509532296, guid: 0b23288a475856d4cae7fb3b78cd9a03, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4799787509532296, guid: 0b23288a475856d4cae7fb3b78cd9a03, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4799787509532296, guid: 0b23288a475856d4cae7fb3b78cd9a03, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4799787509532296, guid: 0b23288a475856d4cae7fb3b78cd9a03, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4799787509532296, guid: 0b23288a475856d4cae7fb3b78cd9a03, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4799787509532296, guid: 0b23288a475856d4cae7fb3b78cd9a03, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4799787509532296, guid: 0b23288a475856d4cae7fb3b78cd9a03, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4799787509532296, guid: 0b23288a475856d4cae7fb3b78cd9a03, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4799787509532296, guid: 0b23288a475856d4cae7fb3b78cd9a03, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4799787509532296, guid: 0b23288a475856d4cae7fb3b78cd9a03, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0b23288a475856d4cae7fb3b78cd9a03, type: 3}
+--- !u!4 &2789725317114581087 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4799787509532296, guid: 0b23288a475856d4cae7fb3b78cd9a03, type: 3}
+  m_PrefabInstance: {fileID: 2784936529419015895}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2879108680795648617 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95335440115492030, guid: 0b23288a475856d4cae7fb3b78cd9a03, type: 3}
+  m_PrefabInstance: {fileID: 2784936529419015895}
+  m_PrefabAsset: {fileID: 0}
