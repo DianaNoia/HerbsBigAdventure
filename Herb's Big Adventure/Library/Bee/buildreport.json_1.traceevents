@@ -1,0 +1,707 @@
+{ "pid": 0, "tid": -1, "ph": "M", "name": "process_name", "args": { "name": "BeeDriver" } },
+{ "pid": 0, "tid": -1, "ph": "M", "name": "process_sort_index", "args": { "sort_index": "-2" } },
+{ "pid": 0, "tid": 1, "ph": "M", "name": "thread_name", "args": { "name": "" } },
+{ "pid": 0, "tid": 1, "ts": 1679438830188750, "dur": 1299141, "ph": "X", "name": "Build Player", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1679438830189207, "dur": 6899, "ph": "X", "name": "WriteBuildProgramData", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1679438830196108, "dur": 1277918, "ph": "X", "name": "Run Backend", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1679438831474027, "dur": 13863, "ph": "X", "name": "Finish", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1679438831488726, "dur": 12, "ph": "X", "name": "", "args": {} },
+{ "cat":"", "pid":12345, "tid":0, "ts":0, "ph":"M", "name":"process_name", "args": { "name":"bee_backend" } }
+,{ "pid":12345, "tid":0, "ts":1679438830223113, "dur":1559, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1679438830224682, "dur":138, "ph":"X", "name": "Tundra",  "args": { "detail":"RemoveStaleOutputs" }}
+,{ "pid":12345, "tid":0, "ts":1679438830224840, "dur":23, "ph":"X", "name": "Tundra",  "args": { "detail":"PrepareNodes" }}
+,{ "pid":12345, "tid":0, "ts":1679438830224863, "dur":487, "ph":"X", "name": "Tundra",  "args": { "detail":"BuildQueueInit" }}
+,{ "pid":12345, "tid":0, "ts":1679438830225393, "dur":560, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1679438830225953, "dur":4, "ph":"X", "name": "SortWorkingStack",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1679438831453773, "dur":245, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1679438831454018, "dur":41, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1679438831454059, "dur":5, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1679438831454064, "dur":14, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1679438831454078, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1679438831454081, "dur":7, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1679438831454088, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1679438831454090, "dur":6, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1679438831454096, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1679438831454098, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1679438831454103, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1679438831454105, "dur":8, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1679438831454113, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1679438831454115, "dur":6, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1679438831454121, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1679438831454123, "dur":8, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1679438831454131, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1679438831454133, "dur":7, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1679438831454140, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1679438831454142, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1679438831454146, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1679438831454148, "dur":6, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1679438831454154, "dur":17, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1679438831454171, "dur":6, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1679438831454177, "dur":0, "ph":"X", "name": "SharedResourceDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1679438831454184, "dur":2, "ph":"X", "name": "BuildQueueDestroyTail",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1679438831454254, "dur":1986, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
+,{ "pid":12345, "tid":1, "ts":1679438830225862, "dur":168, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1679438830226030, "dur":4336, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1679438830230366, "dur":173, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":1, "ts":1679438830230540, "dur":343, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1679438830230889, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1679438830233122, "dur":1728, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":1, "ts":1679438830234913, "dur":108, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":1, "ts":1679438830235021, "dur":144, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1679438830235173, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1679438830235843, "dur":3569, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":1, "ts":1679438830239477, "dur":99, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":1, "ts":1679438830239576, "dur":67, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1679438830239648, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1679438830240008, "dur":20537, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":1, "ts":1679438830260629, "dur":84, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1679438830260714, "dur":88, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1679438830260815, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1679438830260833, "dur":153015, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1679438830413906, "dur":56, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1679438830413962, "dur":252, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1679438830414220, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1679438830414225, "dur":97060, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1679438830511349, "dur":59, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1679438830511409, "dur":59, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1679438830511474, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1679438830511483, "dur":65763, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1679438830577316, "dur":62, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1679438830577379, "dur":60, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1679438830577446, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1679438830577454, "dur":76749, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1679438830654307, "dur":62, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1679438830654370, "dur":66, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1679438830654442, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1679438830654448, "dur":75521, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1679438830730032, "dur":56, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1679438830730089, "dur":52, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1679438830730148, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1679438830730156, "dur":67870, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1679438830798092, "dur":63227, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/Unity.Services.Core.Registration.dll" }}
+,{ "pid":12345, "tid":1, "ts":1679438830861320, "dur":69, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1679438830861401, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1679438830861410, "dur":1527, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/Unity.Services.Core.Registration.dll" }}
+,{ "pid":12345, "tid":1, "ts":1679438830863001, "dur":57, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":1, "ts":1679438830863059, "dur":59, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1679438830863127, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1679438830863135, "dur":312706, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":1, "ts":1679438831175907, "dur":200575, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/Cinemachine.dll" }}
+,{ "pid":12345, "tid":1, "ts":1679438831376483, "dur":80, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1679438831376569, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1679438831376575, "dur":1362, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/Cinemachine.dll" }}
+,{ "pid":12345, "tid":1, "ts":1679438831377997, "dur":75777, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1679438830225730, "dur":253, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1679438830225983, "dur":4303, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1679438830230290, "dur":135, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":2, "ts":1679438830230425, "dur":107, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1679438830230537, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1679438830243459, "dur":3249, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":2, "ts":1679438830246775, "dur":83, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1679438830246859, "dur":72, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1679438830246938, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1679438830247293, "dur":169607, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1679438830416997, "dur":70, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1679438830417068, "dur":74, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1679438830417148, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1679438830417237, "dur":29408, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1679438830446702, "dur":49, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1679438830446751, "dur":44, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1679438830446800, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1679438830446806, "dur":113653, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1679438830560520, "dur":56, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1679438830560576, "dur":53, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1679438830560635, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1679438830560642, "dur":57770, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1679438830618478, "dur":58, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1679438830618536, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1679438830618601, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1679438830618609, "dur":151089, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1679438830769767, "dur":58908, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":2, "ts":1679438830828675, "dur":131, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1679438830828818, "dur":8, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1679438830828837, "dur":7631, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":2, "ts":1679438830836575, "dur":1139, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/Unity.Services.Core.Environments.dll" }}
+,{ "pid":12345, "tid":2, "ts":1679438830837715, "dur":87, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1679438830837808, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1679438830837816, "dur":1190, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/Unity.Services.Core.Environments.dll" }}
+,{ "pid":12345, "tid":2, "ts":1679438830839066, "dur":872, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/Unity.Services.Core.Analytics.dll" }}
+,{ "pid":12345, "tid":2, "ts":1679438830839938, "dur":76, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1679438830840022, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1679438830840030, "dur":1388, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/Unity.Services.Core.Analytics.dll" }}
+,{ "pid":12345, "tid":2, "ts":1679438830841496, "dur":259585, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/Unity.Postprocessing.Runtime.dll" }}
+,{ "pid":12345, "tid":2, "ts":1679438831101082, "dur":119, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1679438831101210, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1679438831101218, "dur":1764, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/Unity.Postprocessing.Runtime.dll" }}
+,{ "pid":12345, "tid":2, "ts":1679438831103044, "dur":60, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/Newtonsoft.Json.dll" }}
+,{ "pid":12345, "tid":2, "ts":1679438831103104, "dur":59, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1679438831103169, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1679438831103175, "dur":210849, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/Newtonsoft.Json.dll" }}
+,{ "pid":12345, "tid":2, "ts":1679438831314107, "dur":139660, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1679438830226101, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1679438830226101, "dur":4204, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1679438830230314, "dur":177, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":3, "ts":1679438830230492, "dur":107, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1679438830230628, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1679438830239688, "dur":1952, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":3, "ts":1679438830241715, "dur":817, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure.exe" }}
+,{ "pid":12345, "tid":3, "ts":1679438830242532, "dur":53, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1679438830242589, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1679438830242593, "dur":2567, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure.exe" }}
+,{ "pid":12345, "tid":3, "ts":1679438830245228, "dur":58, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1679438830245287, "dur":151, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1679438830245443, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1679438830246926, "dur":185980, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1679438830432967, "dur":55, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1679438830433023, "dur":53, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1679438830433083, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1679438830433093, "dur":388262, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1679438830821424, "dur":7382, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/Unity.Services.Core.Networking.dll" }}
+,{ "pid":12345, "tid":3, "ts":1679438830828806, "dur":64, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1679438830828908, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1679438830828916, "dur":8087, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/Unity.Services.Core.Networking.dll" }}
+,{ "pid":12345, "tid":3, "ts":1679438830837332, "dur":61259, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/Unity.Services.Core.dll" }}
+,{ "pid":12345, "tid":3, "ts":1679438830898591, "dur":9307, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1679438830907907, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1679438830907916, "dur":1555, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/Unity.Services.Core.dll" }}
+,{ "pid":12345, "tid":3, "ts":1679438830909531, "dur":57, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":3, "ts":1679438830909589, "dur":61, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1679438830909655, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1679438830909661, "dur":120287, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":3, "ts":1679438831030013, "dur":56, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":3, "ts":1679438831030070, "dur":64, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1679438831030142, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1679438831030151, "dur":177852, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":3, "ts":1679438831208068, "dur":151196, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/Assembly-CSharp-firstpass.dll" }}
+,{ "pid":12345, "tid":3, "ts":1679438831359265, "dur":77, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1679438831359349, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1679438831359356, "dur":1549, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/Assembly-CSharp-firstpass.dll" }}
+,{ "pid":12345, "tid":3, "ts":1679438831360961, "dur":92820, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1679438830225824, "dur":165, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1679438830225989, "dur":4289, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1679438830230289, "dur":155, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":4, "ts":1679438830230444, "dur":107, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1679438830230555, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1679438830239578, "dur":1978, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":4, "ts":1679438830241648, "dur":127, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":4, "ts":1679438830241776, "dur":50, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1679438830241835, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1679438830241841, "dur":9525, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":4, "ts":1679438830251444, "dur":70, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1679438830251516, "dur":74, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1679438830251598, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1679438830251614, "dur":162985, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1679438830414662, "dur":60, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1679438830414722, "dur":46, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1679438830414774, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1679438830414782, "dur":73867, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1679438830488720, "dur":67, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1679438830488788, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1679438830488923, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1679438830488932, "dur":36698, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1679438830525702, "dur":66, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1679438830525768, "dur":62, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1679438830525836, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1679438830525844, "dur":44577, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1679438830570485, "dur":59, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1679438830570545, "dur":62, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1679438830570613, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1679438830570622, "dur":33085, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1679438830603767, "dur":58, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1679438830603825, "dur":60, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1679438830603892, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1679438830603899, "dur":36369, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1679438830640329, "dur":58, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1679438830640388, "dur":55, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1679438830640450, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1679438830640457, "dur":29969, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1679438830670485, "dur":56, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1679438830670541, "dur":53, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1679438830670601, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1679438830670608, "dur":33553, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1679438830704229, "dur":63, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1679438830704293, "dur":61, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1679438830704360, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1679438830704368, "dur":65808, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1679438830770242, "dur":114273, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":4, "ts":1679438830884516, "dur":171, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1679438830884719, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1679438830884726, "dur":10960, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":4, "ts":1679438830895750, "dur":62, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":4, "ts":1679438830895812, "dur":72, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1679438830895891, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1679438830895899, "dur":187758, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":4, "ts":1679438831083724, "dur":60, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":4, "ts":1679438831083785, "dur":62, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1679438831083854, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1679438831083862, "dur":162146, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":4, "ts":1679438831246075, "dur":64, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":4, "ts":1679438831246146, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1679438831246154, "dur":3342, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":4, "ts":1679438831249563, "dur":70, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":4, "ts":1679438831249646, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1679438831249656, "dur":1893, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":4, "ts":1679438831251614, "dur":936, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":4, "ts":1679438831252550, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1679438831252627, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1679438831252635, "dur":1233, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":4, "ts":1679438831253926, "dur":53, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/level1" }}
+,{ "pid":12345, "tid":4, "ts":1679438831253984, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1679438831253989, "dur":1532, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/level1" }}
+,{ "pid":12345, "tid":4, "ts":1679438831255577, "dur":53, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/globalgamemanagers.assets.resS" }}
+,{ "pid":12345, "tid":4, "ts":1679438831255635, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1679438831255642, "dur":2417, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/globalgamemanagers.assets.resS" }}
+,{ "pid":12345, "tid":4, "ts":1679438831258118, "dur":74, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":4, "ts":1679438831258198, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1679438831258204, "dur":1328, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":4, "ts":1679438831259595, "dur":194175, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1679438830225995, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1679438830225995, "dur":4281, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1679438830230288, "dur":202, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":5, "ts":1679438830230490, "dur":298, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1679438830230796, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1679438830241605, "dur":1811, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":5, "ts":1679438830243516, "dur":67, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1679438830243584, "dur":1477, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1679438830245068, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1679438830247002, "dur":166559, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1679438830413615, "dur":59, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1679438830413675, "dur":541, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1679438830414221, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1679438830414226, "dur":29390, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1679438830443691, "dur":163306, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":5, "ts":1679438830606998, "dur":91, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1679438830607097, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1679438830607104, "dur":1517, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":5, "ts":1679438830608678, "dur":58, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1679438830608737, "dur":54, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1679438830608797, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1679438830608828, "dur":31818, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1679438830640708, "dur":55, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1679438830640763, "dur":54, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1679438830640849, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1679438830640856, "dur":38390, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1679438830679303, "dur":58, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1679438830679361, "dur":47, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1679438830679416, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1679438830679420, "dur":38879, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1679438830718361, "dur":67, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1679438830718429, "dur":61, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1679438830718497, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1679438830718526, "dur":51427, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1679438830770022, "dur":110610, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":5, "ts":1679438830880632, "dur":57, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1679438830880700, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1679438830880709, "dur":2572, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":5, "ts":1679438830883345, "dur":57, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":5, "ts":1679438830883402, "dur":55, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1679438830883464, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1679438830883470, "dur":231370, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":5, "ts":1679438831114909, "dur":64, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":5, "ts":1679438831114973, "dur":60, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1679438831115040, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1679438831115047, "dur":338634, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":5, "ts":1679438831453726, "dur":2, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"Player" }}
+,{ "pid":12345, "tid":5, "ts":1679438831453728, "dur":0, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1679438830225967, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1679438830225967, "dur":4307, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1679438830230289, "dur":1, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"WriteText Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info" }}
+,{ "pid":12345, "tid":6, "ts":1679438830230293, "dur":119, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1679438830230417, "dur":2, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/app.info" }}
+,{ "pid":12345, "tid":6, "ts":1679438830230420, "dur":56, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1679438830230482, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1679438830231333, "dur":3182, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/app.info" }}
+,{ "pid":12345, "tid":6, "ts":1679438830234520, "dur":129, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":6, "ts":1679438830234650, "dur":82, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1679438830234760, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1679438830236226, "dur":1096, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":6, "ts":1679438830237401, "dur":139, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":6, "ts":1679438830237540, "dur":51, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1679438830237596, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1679438830237603, "dur":1093, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":6, "ts":1679438830238756, "dur":102, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":6, "ts":1679438830238858, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1679438830238983, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1679438830240228, "dur":2983, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":6, "ts":1679438830243293, "dur":67, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1679438830243360, "dur":1767, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1679438830245137, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1679438830246995, "dur":183921, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1679438830430974, "dur":57, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1679438830431031, "dur":53, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1679438830431089, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1679438830431096, "dur":159899, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1679438830591074, "dur":174, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1679438830591249, "dur":64, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1679438830591320, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1679438830591328, "dur":112824, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1679438830704227, "dur":70, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1679438830704297, "dur":59, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1679438830704362, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1679438830704368, "dur":65629, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1679438830770066, "dur":64, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
+,{ "pid":12345, "tid":6, "ts":1679438830770131, "dur":63, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1679438830770201, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1679438830770210, "dur":92751, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
+,{ "pid":12345, "tid":6, "ts":1679438830863018, "dur":59, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":6, "ts":1679438830863077, "dur":47, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1679438830863128, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1679438830863135, "dur":110456, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":6, "ts":1679438830973656, "dur":61, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":6, "ts":1679438830973718, "dur":57, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1679438830973782, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1679438830973790, "dur":60015, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":6, "ts":1679438831033864, "dur":56, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":6, "ts":1679438831033921, "dur":55, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1679438831033982, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1679438831033992, "dur":184611, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":6, "ts":1679438831218671, "dur":172, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/StreamingAssets/UnityServicesProjectConfiguration.json" }}
+,{ "pid":12345, "tid":6, "ts":1679438831218843, "dur":75, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1679438831218925, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1679438831219303, "dur":1264, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/StreamingAssets/UnityServicesProjectConfiguration.json" }}
+,{ "pid":12345, "tid":6, "ts":1679438831220629, "dur":60, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":6, "ts":1679438831220703, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1679438831220766, "dur":1604, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":6, "ts":1679438831222427, "dur":53, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/sharedassets3.assets.resS" }}
+,{ "pid":12345, "tid":6, "ts":1679438831222487, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1679438831222494, "dur":1568, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/sharedassets3.assets.resS" }}
+,{ "pid":12345, "tid":6, "ts":1679438831224138, "dur":56, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/sharedassets3.assets" }}
+,{ "pid":12345, "tid":6, "ts":1679438831224199, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1679438831224206, "dur":1622, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/sharedassets3.assets" }}
+,{ "pid":12345, "tid":6, "ts":1679438831225885, "dur":52, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/sharedassets2.assets.resS" }}
+,{ "pid":12345, "tid":6, "ts":1679438831225943, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1679438831225949, "dur":4065, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/sharedassets2.assets.resS" }}
+,{ "pid":12345, "tid":6, "ts":1679438831230070, "dur":57, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/sharedassets2.assets" }}
+,{ "pid":12345, "tid":6, "ts":1679438831230149, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1679438831230156, "dur":3361, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/sharedassets2.assets" }}
+,{ "pid":12345, "tid":6, "ts":1679438831233602, "dur":82, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/sharedassets1.assets.resS" }}
+,{ "pid":12345, "tid":6, "ts":1679438831233692, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1679438831233701, "dur":2891, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/sharedassets1.assets.resS" }}
+,{ "pid":12345, "tid":6, "ts":1679438831236653, "dur":57, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/sharedassets1.assets" }}
+,{ "pid":12345, "tid":6, "ts":1679438831236717, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1679438831236724, "dur":1472, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/sharedassets1.assets" }}
+,{ "pid":12345, "tid":6, "ts":1679438831238257, "dur":56, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/sharedassets0.resource" }}
+,{ "pid":12345, "tid":6, "ts":1679438831238321, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1679438831238327, "dur":46016, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/sharedassets0.resource" }}
+,{ "pid":12345, "tid":6, "ts":1679438831284405, "dur":169363, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1679438830226069, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1679438830226069, "dur":4210, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1679438830230288, "dur":205, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":7, "ts":1679438830230494, "dur":305, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1679438830230804, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1679438830241734, "dur":3914, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":7, "ts":1679438830245720, "dur":79, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1679438830245799, "dur":158, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1679438830245964, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1679438830247064, "dur":167744, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1679438830414868, "dur":48, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.UNETModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1679438830414916, "dur":43, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1679438830414964, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1679438830414968, "dur":124346, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.UNETModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1679438830539390, "dur":64, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1679438830539455, "dur":62, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1679438830539523, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1679438830539531, "dur":28987, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1679438830568579, "dur":63, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1679438830568642, "dur":63, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1679438830568712, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1679438830568719, "dur":31273, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1679438830600063, "dur":62, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1679438830600126, "dur":67, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1679438830600199, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1679438830600208, "dur":53989, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1679438830654267, "dur":65, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1679438830654332, "dur":61, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1679438830654399, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1679438830654408, "dur":86083, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1679438830740561, "dur":69, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1679438830740630, "dur":64, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1679438830740701, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1679438830740709, "dur":40235, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1679438830781006, "dur":78361, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/Unity.Services.Core.Telemetry.dll" }}
+,{ "pid":12345, "tid":7, "ts":1679438830859368, "dur":91, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1679438830859468, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1679438830859478, "dur":1432, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/Unity.Services.Core.Telemetry.dll" }}
+,{ "pid":12345, "tid":7, "ts":1679438830860971, "dur":57, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":7, "ts":1679438830861028, "dur":61, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1679438830861095, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1679438830861104, "dur":152280, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":7, "ts":1679438831013447, "dur":55, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":7, "ts":1679438831013503, "dur":54, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1679438831013563, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1679438831013570, "dur":312664, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":7, "ts":1679438831326296, "dur":127500, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1679438830226151, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1679438830226152, "dur":4144, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1679438830230297, "dur":175, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":8, "ts":1679438830230472, "dur":427, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1679438830230909, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1679438830233441, "dur":1260, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":8, "ts":1679438830234760, "dur":106, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":8, "ts":1679438830234866, "dur":57, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1679438830234929, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1679438830235814, "dur":1969, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":8, "ts":1679438830237853, "dur":105, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":8, "ts":1679438830237958, "dur":53, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1679438830238015, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1679438830238042, "dur":171821, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":8, "ts":1679438830409956, "dur":91, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1679438830410047, "dur":72, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1679438830410125, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1679438830410182, "dur":40377, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1679438830450622, "dur":56, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1679438830450679, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1679438830450749, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1679438830450756, "dur":216323, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1679438830667142, "dur":64, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1679438830667206, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1679438830667295, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1679438830667302, "dur":103655, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1679438830771018, "dur":50688, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/Unity.Services.Core.Threading.dll" }}
+,{ "pid":12345, "tid":8, "ts":1679438830821707, "dur":75, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1679438830821789, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1679438830821796, "dur":6031, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/Unity.Services.Core.Threading.dll" }}
+,{ "pid":12345, "tid":8, "ts":1679438830828062, "dur":83502, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/Unity.Services.Core.Internal.dll" }}
+,{ "pid":12345, "tid":8, "ts":1679438830911565, "dur":83, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1679438830911655, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1679438830911685, "dur":1885, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/Unity.Services.Core.Internal.dll" }}
+,{ "pid":12345, "tid":8, "ts":1679438830913631, "dur":54, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":8, "ts":1679438830913685, "dur":57, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1679438830913749, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1679438830913756, "dur":55475, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":8, "ts":1679438830969298, "dur":63, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":8, "ts":1679438830969362, "dur":61, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1679438830969429, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1679438830969437, "dur":172962, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":8, "ts":1679438831142475, "dur":64, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":8, "ts":1679438831142539, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1679438831142610, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1679438831142618, "dur":257777, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":8, "ts":1679438831400437, "dur":53364, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1679438830226204, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1679438830226204, "dur":4091, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1679438830230299, "dur":185, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":9, "ts":1679438830230484, "dur":197, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1679438830230685, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1679438830240110, "dur":2458, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":9, "ts":1679438830242635, "dur":124, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":9, "ts":1679438830242760, "dur":81, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1679438830242851, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1679438830245366, "dur":39784, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":9, "ts":1679438830285223, "dur":79, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1679438830285304, "dur":124338, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1679438830409653, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1679438830409666, "dur":156800, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1679438830566539, "dur":63, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1679438830566603, "dur":325, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1679438830566936, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1679438830566945, "dur":53853, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1679438830620858, "dur":62, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1679438830620920, "dur":54, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1679438830620981, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1679438830620987, "dur":148944, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1679438830769995, "dur":127920, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":9, "ts":1679438830897915, "dur":93, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1679438830898016, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1679438830898023, "dur":10316, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":9, "ts":1679438830908400, "dur":61, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":9, "ts":1679438830908462, "dur":79, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1679438830908547, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1679438830908553, "dur":113997, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":9, "ts":1679438831022619, "dur":59, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":9, "ts":1679438831022679, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1679438831022744, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1679438831022752, "dur":82111, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":9, "ts":1679438831104928, "dur":60, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":9, "ts":1679438831104989, "dur":2638, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1679438831107635, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1679438831107644, "dur":72535, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":9, "ts":1679438831180241, "dur":145833, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":9, "ts":1679438831326075, "dur":84, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1679438831326171, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1679438831326184, "dur":1422, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":9, "ts":1679438831327665, "dur":126121, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1679438830226279, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1679438830226279, "dur":4075, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1679438830230356, "dur":173, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":10, "ts":1679438830230530, "dur":326, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1679438830230860, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1679438830242157, "dur":1963, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":10, "ts":1679438830244209, "dur":60, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1679438830244269, "dur":807, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1679438830245107, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1679438830246914, "dur":166514, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1679438830413497, "dur":61, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1679438830413559, "dur":61, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1679438830413683, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1679438830413694, "dur":30163, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1679438830443947, "dur":73, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1679438830444020, "dur":55, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1679438830444086, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1679438830444097, "dur":27610, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1679438830471768, "dur":58, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1679438830471826, "dur":54, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1679438830471886, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1679438830471894, "dur":67426, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1679438830539401, "dur":73, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1679438830539475, "dur":57, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1679438830539614, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1679438830539621, "dur":53136, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1679438830592824, "dur":61, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1679438830592886, "dur":54, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1679438830592973, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1679438830592981, "dur":62758, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1679438830655804, "dur":61, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":10, "ts":1679438830655865, "dur":64, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1679438830655935, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1679438830655942, "dur":43797, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":10, "ts":1679438830699803, "dur":62, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1679438830699866, "dur":53, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1679438830699924, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1679438830699930, "dur":34959, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1679438830734958, "dur":64, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1679438830735022, "dur":54, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1679438830735084, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1679438830735093, "dur":59427, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1679438830794584, "dur":35831, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/Unity.Services.Core.Scheduler.dll" }}
+,{ "pid":12345, "tid":10, "ts":1679438830830416, "dur":5108, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1679438830835531, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1679438830835553, "dur":2385, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/Unity.Services.Core.Scheduler.dll" }}
+,{ "pid":12345, "tid":10, "ts":1679438830838004, "dur":18564, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/Unity.Services.Core.Device.dll" }}
+,{ "pid":12345, "tid":10, "ts":1679438830856569, "dur":120, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1679438830856703, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1679438830856715, "dur":1505, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/Unity.Services.Core.Device.dll" }}
+,{ "pid":12345, "tid":10, "ts":1679438830858280, "dur":134640, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/Unity.InputSystem.dll" }}
+,{ "pid":12345, "tid":10, "ts":1679438830992920, "dur":101, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1679438830993029, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1679438830993037, "dur":1997, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/Unity.InputSystem.dll" }}
+,{ "pid":12345, "tid":10, "ts":1679438830995096, "dur":57, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":10, "ts":1679438830995153, "dur":57, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1679438830995216, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1679438830995223, "dur":255167, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":10, "ts":1679438831250460, "dur":172, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":10, "ts":1679438831250633, "dur":55, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1679438831250694, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1679438831250700, "dur":1307, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":10, "ts":1679438831252062, "dur":68, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/level3" }}
+,{ "pid":12345, "tid":10, "ts":1679438831252136, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1679438831252141, "dur":1491, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/level3" }}
+,{ "pid":12345, "tid":10, "ts":1679438831253692, "dur":61, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/level2" }}
+,{ "pid":12345, "tid":10, "ts":1679438831253758, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1679438831253764, "dur":1706, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/level2" }}
+,{ "pid":12345, "tid":10, "ts":1679438831255521, "dur":68, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/level0" }}
+,{ "pid":12345, "tid":10, "ts":1679438831255594, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1679438831255599, "dur":1549, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/level0" }}
+,{ "pid":12345, "tid":10, "ts":1679438831257208, "dur":53, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":10, "ts":1679438831257267, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1679438831257273, "dur":1599, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":10, "ts":1679438831258936, "dur":177, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/boot.config" }}
+,{ "pid":12345, "tid":10, "ts":1679438831259114, "dur":54, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1679438831259177, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1679438831259185, "dur":1062, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/boot.config" }}
+,{ "pid":12345, "tid":10, "ts":1679438831260314, "dur":193455, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1679438830226307, "dur":1, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1679438830226308, "dur":3985, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1679438830230294, "dur":255, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":11, "ts":1679438830230549, "dur":357, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1679438830230913, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1679438830233088, "dur":1504, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":11, "ts":1679438830234662, "dur":126, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":11, "ts":1679438830234789, "dur":66, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1679438830234859, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1679438830235806, "dur":1510, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":11, "ts":1679438830237396, "dur":151, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":11, "ts":1679438830237547, "dur":57, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1679438830237609, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1679438830237668, "dur":2263, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":11, "ts":1679438830240025, "dur":175, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":11, "ts":1679438830240200, "dur":235, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1679438830240444, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1679438830240472, "dur":169829, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":11, "ts":1679438830410361, "dur":61, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1679438830410422, "dur":64, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1679438830410496, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1679438830410504, "dur":34953, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1679438830445522, "dur":68, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1679438830445591, "dur":57, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1679438830445654, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1679438830445661, "dur":48434, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1679438830494161, "dur":75, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1679438830494236, "dur":56, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1679438830494298, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1679438830494306, "dur":73350, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1679438830567717, "dur":56, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1679438830567773, "dur":52, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1679438830567831, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1679438830567837, "dur":28042, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1679438830595941, "dur":60, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1679438830596001, "dur":166, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1679438830596173, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1679438830596181, "dur":48689, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1679438830644937, "dur":61, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1679438830644999, "dur":57, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1679438830645063, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1679438830645071, "dur":33950, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1679438830679106, "dur":75, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1679438830679182, "dur":69, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1679438830679261, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1679438830679273, "dur":156010, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1679438830835359, "dur":1018, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/Unity.Services.Core.Environments.Internal.dll" }}
+,{ "pid":12345, "tid":11, "ts":1679438830836377, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1679438830836449, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1679438830836456, "dur":1656, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/Unity.Services.Core.Environments.Internal.dll" }}
+,{ "pid":12345, "tid":11, "ts":1679438830838181, "dur":40445, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/Unity.Services.Core.Configuration.dll" }}
+,{ "pid":12345, "tid":11, "ts":1679438830878626, "dur":98, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1679438830878732, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1679438830878740, "dur":1673, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/Unity.Services.Core.Configuration.dll" }}
+,{ "pid":12345, "tid":11, "ts":1679438830880474, "dur":60, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":11, "ts":1679438830880534, "dur":59, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1679438830880602, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1679438830880611, "dur":227457, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":11, "ts":1679438831108132, "dur":55491, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/NavMeshComponents.dll" }}
+,{ "pid":12345, "tid":11, "ts":1679438831163624, "dur":112, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1679438831163744, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1679438831163752, "dur":5776, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/NavMeshComponents.dll" }}
+,{ "pid":12345, "tid":11, "ts":1679438831169589, "dur":59, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/clipper_library.dll" }}
+,{ "pid":12345, "tid":11, "ts":1679438831169649, "dur":63, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1679438831169718, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1679438831169727, "dur":126316, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/clipper_library.dll" }}
+,{ "pid":12345, "tid":11, "ts":1679438831296112, "dur":157661, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1679438830226370, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1679438830226370, "dur":3949, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1679438830230322, "dur":216, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":12, "ts":1679438830230538, "dur":331, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1679438830230874, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1679438830242753, "dur":1766, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":12, "ts":1679438830244598, "dur":100, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1679438830244698, "dur":347, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1679438830245055, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1679438830246776, "dur":183178, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1679438830430019, "dur":64, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1679438830430083, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1679438830430147, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1679438830430154, "dur":161379, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1679438830591600, "dur":63, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1679438830591664, "dur":59, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1679438830591730, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1679438830591736, "dur":31896, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1679438830623701, "dur":61, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1679438830623762, "dur":60, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1679438830623829, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1679438830623836, "dur":75393, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1679438830699298, "dur":123, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1679438830699421, "dur":83, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1679438830699511, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1679438830699519, "dur":32738, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1679438830732330, "dur":80, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1679438830732410, "dur":12021, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1679438830744448, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1679438830744460, "dur":254797, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1679438830999318, "dur":56, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":12, "ts":1679438830999374, "dur":51, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1679438830999431, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1679438830999439, "dur":320469, "ph":"X", "name": "CopyFiles",  "args": { "detail":"H.E.R.B.'s Big Adventure - Build Windows/H.E.R.B.'s Big Adventure_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":12, "ts":1679438831319969, "dur":133837, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1679438831458625, "dur":2333, "ph":"X", "name": "ProfilerWriteOutput" }
+,{ "pid": 0, "tid": 1, "ts": 1679438831489056, "dur": 1266, "ph": "X", "name": "backend_profiler0.traceevents", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1679438831488709, "dur": 1643, "ph": "X", "name": "Write chrome-trace events", "args": {} },
