@@ -14,7 +14,9 @@ public class PlayerController : MonoBehaviour
     public float crouchSpeed;
     [SerializeField] private bool canStand;
     [SerializeField] private bool crouch = false;
+    [SerializeField] private bool attack = false;
     [SerializeField] private GameObject headPosition;
+    [SerializeField] private GameObject hurtBox;
 
     public float numberOfJumps;
     public bool canDoubleJump = true;
@@ -75,8 +77,6 @@ public class PlayerController : MonoBehaviour
 
                     Debug.Log("JUMP");
                 }
-
-                
             }
             else
             {
@@ -130,6 +130,7 @@ public class PlayerController : MonoBehaviour
         }
 
         Crouching();
+        Attacking();
 
         anim.SetFloat("Speed", Mathf.Abs(moveDirection.x) + Mathf.Abs(moveDirection.z));
         anim.SetBool("Grounded", charController.isGrounded);
@@ -180,6 +181,20 @@ public class PlayerController : MonoBehaviour
                 charController.height = .5f;
                 charController.center = new Vector3(0f, .47f, 0f);
             }
+        }
+    }
+
+    public void Attacking()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Debug.Log("ATTACK");
+
+            attack = true;
+
+            anim.SetTrigger("Attacking");
+
+            hurtBox.SetActive(true);
         }
     }
 }
