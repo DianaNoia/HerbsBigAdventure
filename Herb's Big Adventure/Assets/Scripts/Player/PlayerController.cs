@@ -15,11 +15,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool canStand;
     [SerializeField] private bool crouch = false;
     [SerializeField] private bool attack = false;
-    [SerializeField] private GameObject headPosition;
-    [SerializeField] private GameObject hurtBox;
+
+    public float offsetTime = 1f;
+    private float timer = 0f;
 
     public float numberOfJumps;
     public bool canDoubleJump = true;
+
+    [SerializeField] private GameObject headPosition;
+    public GameObject hurtBox;
 
     private Vector3 moveDirection;
 
@@ -50,6 +54,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         theCam = Camera.main;
+        hurtBox.SetActive(false);
     }
 
     // Update is called once per frame
@@ -165,7 +170,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.C))
         {
-            if (crouch == true && canStand == true) 
+            if (crouch == true && canStand == true)
             {
                 crouch = false; // It also means we are standing
                 anim.SetBool("Crouching", false);
@@ -188,13 +193,21 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log("ATTACK");
-
+            if (!hurtBox.activeInHierarchy)
+            {
+                timer += Time.deltaTime;
+                if (timer > offsetTime)
+                {
+                    timer = 0f;
+                    hurtBox.SetActive(true);
+                }
+            }
             attack = true;
-
+            
+            
             anim.SetTrigger("Attacking");
-
-            hurtBox.SetActive(true);
+            
+            Debug.Log("ATTACK");
         }
     }
 }

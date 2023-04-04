@@ -4,11 +4,7 @@ using UnityEngine;
 
 public class HurtEnemy : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    PlayerController controller;
 
     // Update is called once per frame
     void Update()
@@ -20,6 +16,7 @@ public class HurtEnemy : MonoBehaviour
     {
         if(other.tag == "Enemy")
         {
+            controller.hurtBox.SetActive(false);
             other.GetComponent<EnemyHealthManager>().TakeDamage();
         }
     }

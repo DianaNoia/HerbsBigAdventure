@@ -49,7 +49,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &845565737
 Transform:
   m_ObjectHideFlags: 0
@@ -57,14 +57,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 845565736}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0.397, z: 0.313}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 73934164466255421}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!65 &845565738
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -76,8 +76,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.3, y: 0.1, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.53873456, y: 0.24837872, z: 0.44488358}
+  m_Center: {x: -0.001627028, y: 0.07418938, z: -0.061392367}
 --- !u!114 &845565739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,7 +180,9 @@ MonoBehaviour:
   crouchSpeed: 2
   canStand: 0
   crouch: 0
+  attack: 0
   headPosition: {fileID: 556873582}
+  hurtBox: {fileID: 845565736}
   numberOfJumps: 0
   canDoubleJump: 0
   charController: {fileID: 73934164466255422}

@@ -72,7 +72,7 @@ AnimatorStateMachine:
     m_Position: {x: 320, y: 130, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4686942411110311875}
-    m_Position: {x: 610, y: 390, z: 0}
+    m_Position: {x: 590, y: 380, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2635144072868948249}
     m_Position: {x: 830, y: 130, z: 0}
@@ -370,25 +370,25 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Grounded
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Crouching
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Attacking
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
