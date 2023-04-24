@@ -2066,14 +2066,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2087029167, guid: 61141f7f9dc5acf4b9dc9e97205024b5, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2087029170, guid: 61141f7f9dc5acf4b9dc9e97205024b5, type: 3}
-      propertyPath: levelMusicToPLay
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3506075659137723054, guid: 61141f7f9dc5acf4b9dc9e97205024b5, type: 3}
       propertyPath: m_RootOrder
       value: 5

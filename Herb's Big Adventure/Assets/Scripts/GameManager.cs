@@ -29,18 +29,40 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        // Locks and hides the cursor
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
 
+        // Respawn position reset
         respawnPosition = PlayerController.instance.transform.position;
     }
 
     private void Update()
     {
+        // Pausing the game
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Debug.Log("Pausing!!");
             PauseUnpause();
+        }
+
+        // Add keybinds for numbers for testing levels
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            SceneManager.LoadScene("LevelSelect");
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            SceneManager.LoadScene("Level1");
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            SceneManager.LoadScene("Boss");
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            SceneManager.LoadScene("Test1");
         }
     }
 

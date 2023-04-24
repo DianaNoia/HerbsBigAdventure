@@ -14,10 +14,6 @@ public class PlayerController : MonoBehaviour
     public float crouchSpeed;
     [SerializeField] private bool canStand;
     [SerializeField] private bool crouch = false;
-    [SerializeField] private bool attack = false;
-
-    public float offsetTime = 1f;
-    private float timer = 0f;
 
     public float numberOfJumps;
     public bool canDoubleJump = true;
@@ -54,7 +50,13 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         theCam = Camera.main;
+
         hurtBox.SetActive(false);
+
+        anim = GetComponent<Animator>();
+
+        AddEvent(5, 0f, "EnableEnemyHurtBox", 0);
+        AddEvent(5, .4f, "DisableEnemyHurtBox", 0);
     }
 
     // Update is called once per frame
@@ -104,6 +106,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+        // When knockback of player happens
         if (isKnocking)
         {
             knockBackCounter -= Time.deltaTime;
@@ -127,6 +130,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+        // Stop moving the player
         if (stopMove)
         {
             moveDirection = Vector3.zero;
@@ -134,6 +138,7 @@ public class PlayerController : MonoBehaviour
             charController.Move(moveDirection);
         }
 
+        // Call the crouch and attack when they are activated
         Crouching();
         Attacking();
 
@@ -141,6 +146,7 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("Grounded", charController.isGrounded);
     }
 
+    // Knockback of player
     public void KnockBack()
     {
         isKnocking = true;
@@ -150,24 +156,30 @@ public class PlayerController : MonoBehaviour
         charController.Move(moveDirection * Time.deltaTime);
     }
 
+    // Bounce of the player on enemies head
     public void Bounce()
     {
         moveDirection.y = bounceForce;
         charController.Move(moveDirection * Time.deltaTime);
     }
 
+    // Crouching
     public void Crouching()
     {
+        // Raycast when the player is under something and he can't stand up,
+        // used for debugging 
         if (Physics.Raycast(headPosition.transform.position, Vector3.up, 0.5f))
         {
             canStand = false;
-            Debug.DrawRay(headPosition.transform.position, Vector3.up, Color.green);
+            Debug.DrawRay(headPosition.transform.position, Vector3.up, 
+                Color.green);
         }
         else
         {
             canStand = true;
         }
 
+        // When key pressed, checks if can crouch or not
         if (Input.GetKeyDown(KeyCode.C))
         {
             if (crouch == true && canStand == true)
@@ -189,25 +201,35 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    // Attack basick
     public void Attacking()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if (!hurtBox.activeInHierarchy)
-            {
-                timer += Time.deltaTime;
-                if (timer > offsetTime)
-                {
-                    timer = 0f;
-                    hurtBox.SetActive(true);
-                }
-            }
-            attack = true;
-            
-            
             anim.SetTrigger("Attacking");
-            
             Debug.Log("ATTACK");
         }
     }
+
+    public void EnableEnemyHurtBox()
+    {
+        hurtBox.SetActive(true);
+    }
+
+    public void DisableEnemyHurtBox()
+    {
+        hurtBox.SetActive(false);
+    }
+
+    void AddEvent(int Clip, float time, string functionName, float floatParameter)
+    {
+        anim = GetComponent<Animator>();
+        AnimationEvent animationEvent = new AnimationEvent();
+        animationEvent.functionName = functionName;
+        animationEvent.floatParameter = floatParameter;
+        animationEvent.time = time;
+        AnimationClip clip = anim.runtimeAnimatorController.animationClips[Clip];
+        clip.AddEvent(animationEvent);
+    }
+
 }

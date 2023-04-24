@@ -131,6 +131,8 @@ MonoBehaviour:
   patrolPoints:
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   currentPatrolPoint: 0
   agent: {fileID: 2141947542393287736}
   anim: {fileID: 2083780344919422839}
@@ -163,11 +165,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2141947542393287738}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.69636106, y: 0.24983299, z: 0.77171564}
-  m_Center: {x: -0.0017859936, y: 0.91448945, z: 0.032611847}
+  m_Size: {x: 0.95228577, y: 0.8671317, z: 0.9005444}
+  m_Center: {x: 0.02884674, y: 0.6058401, z: -0.031802535}
 --- !u!1001 &2141947542322450835
 PrefabInstance:
   m_ObjectHideFlags: 0

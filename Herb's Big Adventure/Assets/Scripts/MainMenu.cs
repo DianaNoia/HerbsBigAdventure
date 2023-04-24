@@ -14,6 +14,8 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.visible = true;
+
         if (PlayerPrefs.HasKey("Continue"))
         {
             continueButton.SetActive(true);

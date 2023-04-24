@@ -17,12 +17,6 @@ public class EnemyHealthManager : MonoBehaviour
         currentHealth = maxHealth;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void TakeDamage()
     {
         currentHealth--;
@@ -32,8 +26,6 @@ public class EnemyHealthManager : MonoBehaviour
             AudioManager.instance.PlaySFX(deathSound);
 
             Destroy(gameObject);
-
-            //PlayerController.instance.Bounce();
 
             Instantiate(deathEffect, transform.position + new Vector3(0f, 1.2f, 0f), transform.rotation);
             Instantiate(itemToDrop, transform.position + new Vector3(0f, .5f, 0f), transform.rotation);
