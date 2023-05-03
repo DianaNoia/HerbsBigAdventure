@@ -26,8 +26,8 @@ public class LSUIManager : MonoBehaviour
 
     private void Update()
     {
-        coinsText.text= GameManager.instance.currentCoins.ToString();
-        normalBoltsText.text = UIManager.instance.boltsText.ToString();
-        goldenBoltsText.text = UIManager.instance.goldenBoltsText.ToString();
+        coinsText.text= GameManager.instance.currentGems.ToString();
+        normalBoltsText.text = GameManager.instance.currentNormalBolts.ToString();
+        goldenBoltsText.text = GameManager.instance.currentGoldenBolts.ToString();
     }
 }

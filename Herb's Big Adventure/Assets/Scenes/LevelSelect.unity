@@ -2110,6 +2110,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3506075659137723055, guid: 61141f7f9dc5acf4b9dc9e97205024b5, type: 3}
+      propertyPath: controlsScreen
+      value: 
+      objectReference: {fileID: 1937974708}
     - target: {fileID: 3506075659137723056, guid: 61141f7f9dc5acf4b9dc9e97205024b5, type: 3}
       propertyPath: m_Name
       value: Systems Manager
@@ -2259,14 +2263,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 796699233, guid: a3967d077a897014aa7454ae30c6e332, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 3.7878418
-      objectReference: {fileID: 0}
-    - target: {fileID: 1738173056, guid: a3967d077a897014aa7454ae30c6e332, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2778215740675002466, guid: a3967d077a897014aa7454ae30c6e332, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2355,10 +2351,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 2778215740675002477, guid: a3967d077a897014aa7454ae30c6e332, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2778215740675002478, guid: a3967d077a897014aa7454ae30c6e332, type: 3}
       propertyPath: boltsText
       value: 
@@ -2367,14 +2359,6 @@ PrefabInstance:
       propertyPath: goldenBoltsText
       value: 
       objectReference: {fileID: 1080196801}
-    - target: {fileID: 2778215741128916275, guid: a3967d077a897014aa7454ae30c6e332, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2778215741128916276, guid: a3967d077a897014aa7454ae30c6e332, type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3967d077a897014aa7454ae30c6e332, type: 3}
 --- !u!1 &632153401
@@ -6662,6 +6646,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 211661955, guid: eee8a9539d0ab71418c5a4744767f47b, type: 3}
   m_PrefabInstance: {fileID: 1931160854}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1937974708 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5322159, guid: a3967d077a897014aa7454ae30c6e332, type: 3}
+  m_PrefabInstance: {fileID: 630149959}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1981254512
 PrefabInstance:

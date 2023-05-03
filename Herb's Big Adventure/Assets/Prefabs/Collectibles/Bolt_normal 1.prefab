@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7941716353339891310}
   - component: {fileID: 7941716353339891311}
   - component: {fileID: 7941716353339891305}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bolt_normal 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -152,6 +152,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 3d652f4834969254f94fc13d4f4e53d9, type: 3}
       propertyPath: m_Name
       value: Bolt_model
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3d652f4834969254f94fc13d4f4e53d9, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d652f4834969254f94fc13d4f4e53d9, type: 3}

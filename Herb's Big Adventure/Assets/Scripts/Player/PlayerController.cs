@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour
         {
             float yStore = moveDirection.y;
             // moveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
-            moveDirection = (transform.forward * Input.GetAxisRaw("Vertical")) + (transform.right * Input.GetAxisRaw("Horizontal"));
+            moveDirection = (transform.forward * Input.GetAxis("Vertical")) + (transform.right * Input.GetAxis("Horizontal"));
             moveDirection.Normalize();
             moveDirection = moveDirection * moveSpeed;
             moveDirection.y = yStore;
@@ -85,6 +85,12 @@ public class PlayerController : MonoBehaviour
                     Debug.Log("JUMP");
                 }
             }
+            // Código para melhorar o salto dado pelo prof Diogo, para futura implementação 
+
+            //else if ((Input.GetButton("Jump")) && (numberOfJumps == 1))
+            //{
+            //    moveDirection.y += Physics.gravity.y * 0.2f * Time.deltaTime * gravityScale;
+            //}
             else
             {
                 moveDirection.y += Physics.gravity.y * Time.deltaTime * gravityScale;
@@ -98,7 +104,7 @@ public class PlayerController : MonoBehaviour
 
             charController.Move(moveDirection * Time.deltaTime);
 
-            if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
+            if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
             {
                 transform.rotation = Quaternion.Euler(0f, theCam.transform.rotation.eulerAngles.y, 0f);
                 Quaternion newRotation = Quaternion.LookRotation(new Vector3(moveDirection.x, 0f, moveDirection.z));
@@ -180,23 +186,47 @@ public class PlayerController : MonoBehaviour
         }
 
         // When key pressed, checks if can crouch or not
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKey(KeyCode.C))
+        {
+            Debug.Log("Crouching");
+            if (crouch == false && canStand == true)
+            {
+
+                Debug.Log(" can Crouch");
+                crouch = true; // It also means we are crouching
+                anim.SetBool("Crouching", true);
+
+                jumpForce = 0f;
+                moveSpeed = 2.5f;
+
+                charController.height = .5f;
+                charController.center = new Vector3(0f, .3f, 0f);
+            }
+        }
+        else
         {
             if (crouch == true && canStand == true)
             {
+                Debug.Log(" cant Crouch");
                 crouch = false; // It also means we are standing
                 anim.SetBool("Crouching", false);
+
                 jumpForce = 15f;
+                moveSpeed = 5f;
+
                 charController.height = 1f;
                 charController.center = new Vector3(0f, .58f, 0f);
             }
-            else
+            else if (crouch == true && canStand == false)
             {
-                crouch = true; // It also means we are crouching
+                crouch = false; // It also means we are crouching
                 anim.SetBool("Crouching", true);
+
                 jumpForce = 0f;
+                moveSpeed = 2.5f;
+
                 charController.height = .5f;
-                charController.center = new Vector3(0f, .47f, 0f);
+                charController.center = new Vector3(0f, .3f, 0f);
             }
         }
     }
@@ -231,5 +261,4 @@ public class PlayerController : MonoBehaviour
         AnimationClip clip = anim.runtimeAnimatorController.animationClips[Clip];
         clip.AddEvent(animationEvent);
     }
-
 }

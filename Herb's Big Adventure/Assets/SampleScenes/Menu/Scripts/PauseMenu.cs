@@ -15,7 +15,6 @@ public class PauseMenu : MonoBehaviour
         m_MenuToggle = GetComponent <Toggle> ();
 	}
 
-
     private void MenuOn ()
     {
         m_TimeScaleRef = Time.timeScale;

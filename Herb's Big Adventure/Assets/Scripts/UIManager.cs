@@ -21,9 +21,10 @@ public class UIManager : MonoBehaviour
         boltsText,
         goldenBoltsText;
 
-    public GameObject 
-        pauseScreen, 
-        optionsScreen;
+    public GameObject
+        pauseScreen,
+        optionsScreen,
+        controlsScreen;
 
     public Slider 
         musicVolSlider, 
@@ -72,6 +73,7 @@ public class UIManager : MonoBehaviour
     {
         GameManager.instance.PauseUnpause();
     }
+
     public void OpenOptions()
     {
         optionsScreen.SetActive(true);

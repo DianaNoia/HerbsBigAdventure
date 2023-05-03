@@ -2562,12 +2562,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathEffect: {fileID: 3525138764905867911, guid: d32e90e1fcd475c4eba2b9334b98dfb8, type: 3}
-  currentCoins: 0
+  currentGems: 0
   currentNormalBolts: 0
   currentGoldenBolts: 0
   levelEndMusic: 8
   levelToLoad: LevelSelect
+  currentLevel: 
   isRespawning: 0
+  controlsShown: 0
 --- !u!114 &2087029167
 MonoBehaviour:
   m_ObjectHideFlags: 0

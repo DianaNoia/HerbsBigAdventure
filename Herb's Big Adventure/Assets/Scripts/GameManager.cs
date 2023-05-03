@@ -11,15 +11,18 @@ public class GameManager : MonoBehaviour
 
     public GameObject deathEffect;
 
-    public int currentCoins;
+    public int currentGems;
     public int currentNormalBolts;
     public int currentGoldenBolts;
 
     public int levelEndMusic = 8;
 
     public string levelToLoad;
+    public string currentLevel;
 
     public bool isRespawning;
+
+    public bool controlsShown = false;
 
     private void Awake()
     {
@@ -29,12 +32,16 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        currentLevel = SceneManager.GetActiveScene().name;
+
         // Locks and hides the cursor
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
 
         // Respawn position reset
         respawnPosition = PlayerController.instance.transform.position;
+
+        //OpenControls();
     }
 
     private void Update()
@@ -45,6 +52,12 @@ public class GameManager : MonoBehaviour
             Debug.Log("Pausing!!");
             PauseUnpause();
         }
+
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    Debug.Log("Controls!!");
+        //    OpenControls();
+        //}
 
         // Add keybinds for numbers for testing levels
         if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -108,10 +121,10 @@ public class GameManager : MonoBehaviour
         respawnPosition = newSpawnPoint;
     }
 
-    public void AddCoins(int coinsToAdd)
+    public void AddGems(int gemsToAdd)
     {
-        currentCoins += coinsToAdd;
-        UIManager.instance.coinText.text = currentCoins.ToString();
+        currentGems += gemsToAdd;
+        UIManager.instance.coinText.text = currentGems.ToString();
     }
 
     public void AddNormalBolts(int normalBoltsToAdd)
@@ -147,6 +160,31 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    //public void OpenControls()
+    //{
+    //    if (currentLevel == "Level1")
+    //    {
+    //        if (UIManager.instance.controlsScreen.activeInHierarchy && controlsShown)
+    //        {
+    //            UIManager.instance.controlsScreen.SetActive(false);
+    //            Time.timeScale = 1f;
+
+    //            Cursor.visible = false;
+    //            Cursor.lockState = CursorLockMode.Locked;
+    //        }
+    //        else if (!UIManager.instance.controlsScreen.activeInHierarchy && !controlsShown)
+    //        {
+    //            UIManager.instance.controlsScreen.SetActive(true);
+    //            Time.timeScale = 0f;
+
+    //            controlsShown = true;
+
+    //            Cursor.visible = true;
+    //            Cursor.lockState = CursorLockMode.None;
+    //        }            
+    //    }
+    //}
+
     public IEnumerator LevelEndCo()
     {
         AudioManager.instance.PlayMusic(levelEndMusic);
@@ -159,16 +197,16 @@ public class GameManager : MonoBehaviour
 
         PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_unlocked", 1);
 
-        if (PlayerPrefs.HasKey(SceneManager.GetActiveScene().name + "_coins"))
+        if (PlayerPrefs.HasKey(SceneManager.GetActiveScene().name + "_gems"))
         {
-            if (currentCoins > PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + "_coins"))
+            if (currentGems > PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + "_gems"))
             {
-                PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_coins", currentCoins);
+                PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_gems", currentGems);
             }
         }
         else
         {
-            PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_coins", currentCoins);
+            PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_gems", currentGems);
         }
 
         SceneManager.LoadScene(levelToLoad);   
