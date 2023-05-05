@@ -13,7 +13,6 @@ public class HealthManager : MonoBehaviour
 
     public Sprite[] healthBarImgs;
 
-
     public int soundToPlay;
 
     private void Awake()
@@ -101,23 +100,20 @@ public class HealthManager : MonoBehaviour
 
         switch (currentHealth)
         {
-            case 5:
+            case 4:
                 UIManager.instance.healthImage.sprite = healthBarImgs[4];
                 break;
-            case 4:
+            case 3:
                 UIManager.instance.healthImage.sprite = healthBarImgs[3];
                 break;
-            case 3:
+            case 2:
                 UIManager.instance.healthImage.sprite = healthBarImgs[2];
                 break;
-            case 2:
+            case 1:
                 UIManager.instance.healthImage.sprite = healthBarImgs[1];
                 break;
-            case 1:
-                UIManager.instance.healthImage.sprite = healthBarImgs[0];
-                break;
             case 0:
-                UIManager.instance.healthImage.enabled = false;
+                UIManager.instance.healthImage.sprite = healthBarImgs[0];
                 break;
         }
     }

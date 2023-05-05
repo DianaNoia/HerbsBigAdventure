@@ -2582,15 +2582,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12404ed7e75e2f34eb1e4b929f3f483a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 5
-  maxHealth: 5
+  currentHealth: 4
+  maxHealth: 4
   invincibleLength: 2
   healthBarImgs:
-  - {fileID: 21300000, guid: 2cb4fab580a856740ac7727d6f58fbc5, type: 3}
-  - {fileID: 21300000, guid: d010abe148e1a034988978c77c14b098, type: 3}
-  - {fileID: 21300000, guid: 498e1f9b5f6220b4c9610d65d4ae5aed, type: 3}
-  - {fileID: 21300000, guid: 1992c93d4dd214b43a695ef454a4ed60, type: 3}
-  - {fileID: 21300000, guid: 9704dbb03d7288b4e9f0e15525db38d1, type: 3}
+  - {fileID: 21300000, guid: 7987412ea6436e54395f2ec0e703128c, type: 3}
+  - {fileID: 21300000, guid: 011804bd75be4d84cb27cb5ccad748b7, type: 3}
+  - {fileID: 21300000, guid: d8b5ea91235157942b63d7d20da0a387, type: 3}
+  - {fileID: 21300000, guid: 0a3f2ac8c359bd945b1d2fefe99d57e5, type: 3}
+  - {fileID: 21300000, guid: a79e66f460ca8fb49b8a47e5818c997b, type: 3}
   soundToPlay: 8
 --- !u!114 &2087029170
 MonoBehaviour:

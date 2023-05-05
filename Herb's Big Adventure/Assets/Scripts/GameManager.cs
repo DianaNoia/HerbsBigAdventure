@@ -35,8 +35,8 @@ public class GameManager : MonoBehaviour
         currentLevel = SceneManager.GetActiveScene().name;
 
         // Locks and hides the cursor
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
 
         // Respawn position reset
         respawnPosition = PlayerController.instance.transform.position;
@@ -66,16 +66,16 @@ public class GameManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            SceneManager.LoadScene("Level1");
+            SceneManager.LoadScene("Level3");
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            SceneManager.LoadScene("Boss");
+            SceneManager.LoadScene("Level1");
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
-            SceneManager.LoadScene("Test1");
+            SceneManager.LoadScene("Boss");
         }
     }
 
