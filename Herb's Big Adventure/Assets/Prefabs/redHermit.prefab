@@ -154,9 +154,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 3
+  isImmortal: 0
   deathSound: 6
   deathEffect: {fileID: 9075779683149004032, guid: df47e7cbc55d30b4992f24e9769c699f, type: 3}
-  itemToDrop: {fileID: 7048594543696137411, guid: 635dfa7294135c24fb737abe0c51dba3, type: 3}
+  itemToDrop: {fileID: 8714933507198256491, guid: a725845a4a2bb0941b0f0b746065ce1e, type: 3}
 --- !u!65 &2141947542393287685
 BoxCollider:
   m_ObjectHideFlags: 0

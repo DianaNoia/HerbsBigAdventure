@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\NormalBoltPickup.cs" />
     <Compile Include="Assets\Scripts\Checkpoints.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\LevelMechanics\BoxFloorCheck.cs" />
     <Compile Include="Assets\Scripts\HealthPickup.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\CameraSwitch.cs" />
     <Compile Include="Assets\Scripts\EnemyController.cs" />
@@ -72,6 +73,8 @@
     <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
     <Compile Include="Assets\Scripts\HurtPlayer.cs" />
     <Compile Include="Assets\Scripts\LevelSelect\LSResetPosition.cs" />
+    <Compile Include="Assets\Scripts\LevelMechanics\SwitchingObjectsWithPressurePlates.cs" />
+    <Compile Include="Assets\Scripts\LevelMechanics\PressurePlateController.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\DestroyOverTime.cs" />
     <Compile Include="Assets\Scripts\SlowFollowY.cs" />

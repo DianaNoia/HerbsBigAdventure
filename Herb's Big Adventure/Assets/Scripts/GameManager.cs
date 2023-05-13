@@ -6,23 +6,37 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    PlayerController pc;
 
     private Vector3 respawnPosition;
 
-    public GameObject deathEffect;
+    [SerializeField]
+    private GameObject deathEffect;
 
-    public int currentGems;
-    public int currentNormalBolts;
-    public int currentGoldenBolts;
+    [SerializeField]
+    public int      currentNormalBolts,
+                    currentGoldenBolts;
 
-    public int levelEndMusic = 8;
+    [SerializeField]
+    private int levelEndMusic = 8;
 
+    [SerializeField]
     public string levelToLoad;
+
+    [SerializeField]
     public string currentLevel;
 
+    [SerializeField]
     public bool isRespawning;
 
-    public bool controlsShown = false;
+    // [SerializeField]
+    // private bool controlsShown = false;
+
+    // Cheat to skip boss level and start close to boss
+    [SerializeField]
+    private  GameObject player;
+    [SerializeField]
+    private Transform playerTransform, destinationTransform ;
 
     private void Awake()
     {
@@ -53,29 +67,34 @@ public class GameManager : MonoBehaviour
             PauseUnpause();
         }
 
-        //if (Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    Debug.Log("Controls!!");
-        //    OpenControls();
-        //}
-
-        // Add keybinds for numbers for testing levels
+        // Add keybinds for numbers for cheats to skip levels
+        // Go to level select
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             SceneManager.LoadScene("LevelSelect");
         }
+        // Go to Level 1
         if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            SceneManager.LoadScene("Level3");
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             SceneManager.LoadScene("Level1");
         }
-
+        // Go to Level 2
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            SceneManager.LoadScene("Level3");
+        }
+        // Go to boss level
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
             SceneManager.LoadScene("Boss");
+        }
+        // Place player closer to goal
+        if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            Debug.Log("Change players position");
+            player.SetActive(false);
+            playerTransform.position = destinationTransform.position;
+            player.SetActive(true);
         }
     }
 
@@ -120,13 +139,7 @@ public class GameManager : MonoBehaviour
     {
         respawnPosition = newSpawnPoint;
     }
-
-    public void AddGems(int gemsToAdd)
-    {
-        currentGems += gemsToAdd;
-        UIManager.instance.coinText.text = currentGems.ToString();
-    }
-
+    
     public void AddNormalBolts(int normalBoltsToAdd)
     {
         currentNormalBolts += normalBoltsToAdd;
@@ -156,7 +169,7 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0f;
 
             Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
+            Cursor.lockState = CursorLockMode.Confined;
         }
     }
 
@@ -197,16 +210,16 @@ public class GameManager : MonoBehaviour
 
         PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_unlocked", 1);
 
-        if (PlayerPrefs.HasKey(SceneManager.GetActiveScene().name + "_gems"))
+        if (PlayerPrefs.HasKey(SceneManager.GetActiveScene().name + "_normalBolts"))
         {
-            if (currentGems > PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + "_gems"))
+            if (currentNormalBolts > PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + "_normalBolts"))
             {
-                PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_gems", currentGems);
+                PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_normalBolts", currentNormalBolts);
             }
         }
         else
         {
-            PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_gems", currentGems);
+            PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_normalBolts", currentNormalBolts);
         }
 
         SceneManager.LoadScene(levelToLoad);   

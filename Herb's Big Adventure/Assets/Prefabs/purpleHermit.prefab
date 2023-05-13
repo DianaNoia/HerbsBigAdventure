@@ -73,15 +73,14 @@ MonoBehaviour:
   patrolPoints:
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
   currentPatrolPoint: 0
   agent: {fileID: 6255762386565707769}
   anim: {fileID: 6305939336153566451}
   currentState: 0
   waitAtPoint: 2
-  chaseRange: 8
+  chaseRange: 6
   attackRange: 1
-  timeBetweenAttacks: 2
+  timeBetweenAttacks: 20
 --- !u!114 &6255762386565707771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,8 +95,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 1
   deathSound: 6
+  anim: {fileID: 6305939336153566451}
   deathEffect: {fileID: 9075779683149004032, guid: df47e7cbc55d30b4992f24e9769c699f, type: 3}
-  itemToDrop: {fileID: 604567369478987538, guid: 72f3947ab1e50ea46960f9c7b8896ca1, type: 3}
+  itemToDrop: {fileID: 8714933507198256491, guid: a725845a4a2bb0941b0f0b746065ce1e, type: 3}
 --- !u!65 &6255762386565707764
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -106,7 +106,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6255762386565707775}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.0175729, y: 1.0099955, z: 1.1025887}

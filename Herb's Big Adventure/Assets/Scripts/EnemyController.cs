@@ -12,21 +12,22 @@ public class EnemyController : MonoBehaviour
 
     public Animator anim;
 
+    // States of the enemies
     public enum AIState
     {
         isIdle, isPatrolling, isChasing, isAttacking
     };
 
-    public AIState currentState;
+    public AIState  currentState;
 
-    public float waitAtPoint = 2f;
-    private float waitCounter;
+    public float    waitAtPoint = 2f;
+    private float   waitCounter;
 
-    public float chaseRange;
+    public float    chaseRange;
 
-    public float attackRange = 1f;
-    public float timeBetweenAttacks = 2f;
-    private float attackCounter;
+    public float    attackRange = 1f;
+    public float    timeBetweenAttacks = 2f;
+    private float   attackCounter;
 
     // Start is called before the first frame update
     void Start()
@@ -135,9 +136,7 @@ public class EnemyController : MonoBehaviour
                         agent.isStopped = false;
                     }
                 }
-
                 break;
         }
-    
     }
 }

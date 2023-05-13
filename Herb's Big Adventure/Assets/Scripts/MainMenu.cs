@@ -14,7 +14,6 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.visible = true;
 
         if (PlayerPrefs.HasKey("Continue"))
         {
@@ -24,6 +23,11 @@ public class MainMenu : MonoBehaviour
         {
             ResetProgress();
         }
+    }
+    private void Update()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
     public void NewGame()

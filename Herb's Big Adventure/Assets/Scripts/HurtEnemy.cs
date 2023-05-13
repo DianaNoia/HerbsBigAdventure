@@ -8,9 +8,20 @@ public class HurtEnemy : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Enemy")
-        {
-            other.GetComponent<EnemyHealthManager>().TakeDamage();
-        }
+        Debug.LogWarning("confirm damage");
+        Debug.LogWarning("NORMAL DAMAGE");
+
+        other.GetComponent<EnemyHealthManager>().TakeDamageNormalAttack();
+        
+        //if (controller.weaponHurtBox.activeInHierarchy)
+        //{
+        //    Debug.LogWarning("WEAPON DAMAGE");
+        //    other.GetComponent<EnemyHealthManager>().TakeDamageWeaponAttack();
+        //}
+        //if (controller.chargedHurtBox.activeInHierarchy)
+        //{
+        //    Debug.LogWarning("CHARGE DAMAGE");
+        //    other.GetComponent<EnemyHealthManager>().TakeDamageChargedAttack();
+        //}
     }
 }

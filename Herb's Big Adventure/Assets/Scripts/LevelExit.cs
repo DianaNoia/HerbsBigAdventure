@@ -4,19 +4,10 @@ using UnityEngine;
 
 public class LevelExit : MonoBehaviour
 {
+    PlayerController pc;
     public Animator anim;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public bool givesWeapon;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -24,6 +15,11 @@ public class LevelExit : MonoBehaviour
         {
             anim.SetTrigger("Hit");
             StartCoroutine(GameManager.instance.LevelEndCo());
+        }
+
+        if (givesWeapon == true)
+        {
+            pc.hasWeapon = true;
         }
     }
 }

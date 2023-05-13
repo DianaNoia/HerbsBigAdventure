@@ -2586,11 +2586,11 @@ MonoBehaviour:
   maxHealth: 4
   invincibleLength: 2
   healthBarImgs:
-  - {fileID: 21300000, guid: 7987412ea6436e54395f2ec0e703128c, type: 3}
-  - {fileID: 21300000, guid: 011804bd75be4d84cb27cb5ccad748b7, type: 3}
-  - {fileID: 21300000, guid: d8b5ea91235157942b63d7d20da0a387, type: 3}
-  - {fileID: 21300000, guid: 0a3f2ac8c359bd945b1d2fefe99d57e5, type: 3}
-  - {fileID: 21300000, guid: a79e66f460ca8fb49b8a47e5818c997b, type: 3}
+  - {fileID: 21300000, guid: 06be7522f0f7b5a468e97c469be1ef72, type: 3}
+  - {fileID: 21300000, guid: 95b41c04fabdce341ace0db8cc393c3e, type: 3}
+  - {fileID: 21300000, guid: dc70d9128306b7c43954a775d66070f4, type: 3}
+  - {fileID: 21300000, guid: 9d95d0029dd90b2498380b84ee4a5653, type: 3}
+  - {fileID: 21300000, guid: 888405ff261201d4fb5cd026ba5f7743, type: 3}
   soundToPlay: 8
 --- !u!114 &2087029170
 MonoBehaviour:

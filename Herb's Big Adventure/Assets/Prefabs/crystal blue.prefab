@@ -28,6 +28,7 @@ Transform:
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: 0, y: 0.86, z: 0}
   m_LocalScale: {x: 44.82525, y: 44.82525, z: 90.71707}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2064769565478604914}
   m_RootOrder: 0
@@ -94,7 +95,7 @@ GameObject:
   - component: {fileID: 2064769565478604914}
   - component: {fileID: 798152397}
   - component: {fileID: 798152395}
-  - component: {fileID: 798152396}
+  - component: {fileID: 370460334}
   m_Layer: 0
   m_Name: crystal blue
   m_TagString: Untagged
@@ -112,6 +113,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.32, y: 0, z: 2.9300003}
   m_LocalScale: {x: 0.29686, y: 0.29686, z: 0.29686}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5381104481951306852}
   m_Father: {fileID: 0}
@@ -132,7 +134,7 @@ SphereCollider:
   m_Center: {x: 0, y: 0.8228123, z: 0}
 --- !u!95 &798152395
 Animator:
-  serializedVersion: 3
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -145,11 +147,12 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &798152396
+--- !u!114 &370460334
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -158,9 +161,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8714933507198256491}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65ddbd2b0776a5f4a8bba9a70b2c85b8, type: 3}
+  m_Script: {fileID: 11500000, guid: 38733d3566c962c4a96d5cf1c12f619e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 3
-  pickupEffect: {fileID: 5572311104299733963, guid: 8c54fa68fd5897c40849c248b7f3a707, type: 3}
-  soundToPlay: 5
+  healAmount: 1
+  isFullHeal: 0
+  healEffect: {fileID: 6245639405762213763, guid: 2708148bb4c4ef546b91db29364859e4, type: 3}
+  soundToPlay: 7

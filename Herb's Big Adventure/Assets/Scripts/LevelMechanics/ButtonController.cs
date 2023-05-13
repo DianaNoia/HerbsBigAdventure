@@ -18,19 +18,12 @@ public class ButtonController : MonoBehaviour
         buttonUp = button.position;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
             if (isOnOff)
             {
-
                 if (isPressed)
                 {
                     button.position = buttonUp;

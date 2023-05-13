@@ -4,23 +4,26 @@ using UnityEngine;
 
 public class GemsPickup : MonoBehaviour
 {
-    public int value;
+    //[SerializeField]
+    //private int value;
 
-    public GameObject pickupEffect;
+    //[SerializeField]
+    //private GameObject pickupEffect;
 
-    public int soundToPlay;
+    //[SerializeField]
+    //private int soundToPlay;
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Player")
-        {
-            GameManager.instance.AddGems(value);
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.tag == "Player")
+    //    {
+    //        GameManager.instance.AddGems(value);
 
-            Destroy(gameObject);
+    //        Destroy(gameObject);
 
-            Instantiate(pickupEffect, transform.position, transform.rotation);
+    //        Instantiate(pickupEffect, transform.position, transform.rotation);
 
-            AudioManager.instance.PlaySFX(soundToPlay);
-        }
-    }
+    //        AudioManager.instance.PlaySFX(soundToPlay);
+    //    }
+    //}
 }

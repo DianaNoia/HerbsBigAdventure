@@ -6,14 +6,20 @@ public class HealthManager : MonoBehaviour
 {
     public static HealthManager instance;
 
-    public int currentHealth, maxHealth;
+    [SerializeField]
+    private int currentHealth, maxHealth;
+
+    [SerializeField]
+    private bool invicibilityCheat;
 
     public float invincibleLength = 1f;
     private float invincibleCounter;
 
-    public Sprite[] healthBarImgs;
+    [SerializeField]
+    private Sprite[] healthBarImgs;
 
-    public int soundToPlay;
+    [SerializeField]
+    private int soundToPlay;
 
     private void Awake()
     {
@@ -24,6 +30,7 @@ public class HealthManager : MonoBehaviour
     void Start()
     {
         ResetHealth();
+        invicibilityCheat = false;
     }
 
     // Update is called once per frame
@@ -50,11 +57,18 @@ public class HealthManager : MonoBehaviour
                 }
             }
         }
+
+        // Make Player invicible
+        if (Input.GetKey(KeyCode.Alpha6))
+        {
+            Debug.Log("Invicible");
+            invicibilityCheat = true;
+        }
     }
 
     public void Hurt()
     {
-        if(invincibleCounter <= 0)
+        if (invincibleCounter <= 0 && invicibilityCheat == false)
         {
             currentHealth--;
 
@@ -72,6 +86,10 @@ public class HealthManager : MonoBehaviour
             UpdateUI();
 
             AudioManager.instance.PlaySFX(soundToPlay);
+        }
+        else if (invicibilityCheat == true)
+        {
+            currentHealth = maxHealth;
         }
     }
 

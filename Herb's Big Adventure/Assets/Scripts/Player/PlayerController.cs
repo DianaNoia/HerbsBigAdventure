@@ -14,12 +14,10 @@ public class PlayerController : MonoBehaviour
     public float crouchSpeed;
     [SerializeField] private bool canStand;
     [SerializeField] private bool crouch = false;
+    [SerializeField] private GameObject headPosition;
 
     public float numberOfJumps;
     public bool canDoubleJump = true;
-
-    [SerializeField] private GameObject headPosition;
-    public GameObject hurtBox;
 
     private Vector3 moveDirection;
 
@@ -41,6 +39,23 @@ public class PlayerController : MonoBehaviour
 
     public bool stopMove;
 
+    // Timer for the charged attack
+    private float holdDownTime = 0;
+
+    // Bools to check which attacked occured
+    public bool    attackedNormal = false, 
+                   attackedWithWeapon = false, 
+                   attackedCharged = false;
+
+    // Colliders for each of the attacks
+    public GameObject hurtBox, weaponHurtBox, chargedHurtBox;
+
+    // Bool to check if player has picked up weapon
+    public bool hasWeapon = false;
+
+    // Weapon GameObject
+    public GameObject weapon;
+
     private void Awake()
     {
         instance = this;
@@ -52,6 +67,8 @@ public class PlayerController : MonoBehaviour
         theCam = Camera.main;
 
         hurtBox.SetActive(false);
+        weaponHurtBox.SetActive(false);
+        chargedHurtBox.SetActive(false);
 
         anim = GetComponent<Animator>();
 
@@ -66,7 +83,7 @@ public class PlayerController : MonoBehaviour
         {
             float yStore = moveDirection.y;
             // moveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
-            moveDirection = (transform.forward * Input.GetAxis("Vertical")) + (transform.right * Input.GetAxis("Horizontal"));
+            moveDirection = (transform.forward * Input.GetAxisRaw("Vertical")) + (transform.right * Input.GetAxisRaw("Horizontal"));
             moveDirection.Normalize();
             moveDirection = moveDirection * moveSpeed;
             moveDirection.y = yStore;
@@ -104,7 +121,7 @@ public class PlayerController : MonoBehaviour
 
             charController.Move(moveDirection * Time.deltaTime);
 
-            if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+            if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
             {
                 transform.rotation = Quaternion.Euler(0f, theCam.transform.rotation.eulerAngles.y, 0f);
                 Quaternion newRotation = Quaternion.LookRotation(new Vector3(moveDirection.x, 0f, moveDirection.z));
@@ -147,9 +164,27 @@ public class PlayerController : MonoBehaviour
         // Call the crouch and attack when they are activated
         Crouching();
         Attacking();
+        AttackingWithWeapon(); 
+        SwingAttackWithWeapon();
 
         anim.SetFloat("Speed", Mathf.Abs(moveDirection.x) + Mathf.Abs(moveDirection.z));
         anim.SetBool("Grounded", charController.isGrounded);
+
+        // Checks if player has weapon active or not
+        if (hasWeapon == true)
+        {
+            weapon.SetActive(true);
+        }
+        else
+        {
+            weapon.SetActive(false);
+        }
+
+        // Activates weapon just in case end of level doesnt work
+        if (Input.GetKeyDown(KeyCode.Alpha7))
+        {
+            hasWeapon = true;
+        }
     }
 
     // Knockback of player
@@ -162,12 +197,12 @@ public class PlayerController : MonoBehaviour
         charController.Move(moveDirection * Time.deltaTime);
     }
 
-    // Bounce of the player on enemies head
-    public void Bounce()
-    {
-        moveDirection.y = bounceForce;
-        charController.Move(moveDirection * Time.deltaTime);
-    }
+    //// Bounce of the player on enemies head
+    //public void Bounce()
+    //{
+    //    moveDirection.y = bounceForce;
+    //    charController.Move(moveDirection * Time.deltaTime);
+    //}
 
     // Crouching
     public void Crouching()
@@ -234,23 +269,101 @@ public class PlayerController : MonoBehaviour
     // Attack basick
     public void Attacking()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (!hasWeapon)
         {
-            anim.SetTrigger("Attacking");
-            Debug.Log("ATTACK");
+            if (Input.GetMouseButtonDown(0))
+            {
+                anim.SetTrigger("Attacking");
+                Debug.Log("ATTACK");
+
+                attackedNormal = true;
+            }
+            if (Input.GetMouseButtonUp(0))
+            {
+                attackedNormal = false;
+            }
         }
     }
 
+    // Attack with weapon
+    public void AttackingWithWeapon()
+    {
+        if (hasWeapon == true)
+        {
+            Debug.Log("Has weapon");
+            
+            if (Input.GetMouseButtonDown(0))
+            {
+                anim.SetTrigger("AttackingWeapon");
+                Debug.Log("ATTACK WITH WEAPON");
+
+                attackedWithWeapon = true;
+            }
+            if (Input.GetMouseButtonUp(0))
+            {
+                attackedWithWeapon = false;
+            }
+        }
+    }
+
+    // Swing attack, charged and only with weapon
+    public void SwingAttackWithWeapon()
+    {
+        if (hasWeapon == true)
+        {
+            if (Input.GetMouseButton(1))
+            {
+                holdDownTime += Time.deltaTime;
+            }
+
+            if ((Input.GetMouseButtonUp(1)) && (holdDownTime > 2))
+            {
+                anim.SetTrigger("SwingAttack");
+                Debug.Log("SWING ATTACK");
+
+                attackedCharged = true;
+            }
+
+            if ((Input.GetMouseButtonUp(1)) && (holdDownTime < 2))
+            {
+                holdDownTime = 0;
+
+                attackedCharged = false;
+            }
+        }        
+    }
+
+    // NORMAL attack hurtbox
     public void EnableEnemyHurtBox()
     {
         hurtBox.SetActive(true);
     }
-
     public void DisableEnemyHurtBox()
     {
         hurtBox.SetActive(false);
     }
 
+    // WEAPON attack hurtbox
+    public void EnableWeaponEnemyHurtBox()
+    {
+        weaponHurtBox.SetActive(true);
+    }
+    public void DisableWeaponEnemyHurtBox()
+    {
+        weaponHurtBox.SetActive(false);
+    } 
+    
+    // CHARGED attack hurtbox
+    public void EnableChargedEnemyHurtBox()
+    {
+        chargedHurtBox.SetActive(true);
+    }
+    public void DisableChargedEnemyHurtBox()
+    {
+        chargedHurtBox.SetActive(false);
+    }
+
+    // Animation events 
     void AddEvent(int Clip, float time, string functionName, float floatParameter)
     {
         anim = GetComponent<Animator>();

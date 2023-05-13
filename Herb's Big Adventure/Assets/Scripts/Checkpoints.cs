@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Checkpoints : MonoBehaviour
 {
+
     public GameObject cpOn, cpOff;
 
     public int soundToPlay;

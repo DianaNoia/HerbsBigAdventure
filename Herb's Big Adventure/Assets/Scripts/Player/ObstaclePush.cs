@@ -8,6 +8,7 @@ public class ObstaclePush : MonoBehaviour
     private float forceMagnitude;
 
     // Reference to PlayerController script
+    [SerializeField]
     private PlayerController playerController;
 
     // When the collider of player hits the collider of box
@@ -17,20 +18,20 @@ public class ObstaclePush : MonoBehaviour
 
         if (rigidbody != null)
         {
+            playerController.anim.SetTrigger("Pushing");
+            playerController.moveSpeed = 2.5f;
+
             Vector3 forceDirection = hit.gameObject.transform.position - transform.position;
             forceDirection.y = 0;
             forceDirection.Normalize();
 
             rigidbody.AddForceAtPosition(forceDirection * forceMagnitude, transform.position, ForceMode.Impulse);
 
-            playerController.moveSpeed = 2.5f;
-            playerController.anim.SetTrigger("Pushing");
             Debug.Log("Pushing");
         }
-        //else
-        //{
-        //    playerController.moveSpeed = 5f;
-        //    Debug.Log("Stopped Pushing");
-        //}
+        if(rigidbody == null)
+        {
+            playerController.moveSpeed = 5f;
+        }
     }
 }

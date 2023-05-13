@@ -6,13 +6,13 @@ using UnityEngine.UI;
 public class LSUIManager : MonoBehaviour
 {
     public static LSUIManager instance;
+    GameManager gm;
 
     public Text lNameText;
     public GameObject lNamePanel;
 
-    public Text coinsText;
     public Text normalBoltsText;
-    public Text goldenBoltsText;
+    public Image goldenBolts1, goldenBolts2, goldenBolts3;
 
     private void Awake()
     {
@@ -26,8 +26,20 @@ public class LSUIManager : MonoBehaviour
 
     private void Update()
     {
-        coinsText.text= GameManager.instance.currentGems.ToString();
-        normalBoltsText.text = GameManager.instance.currentNormalBolts.ToString();
-        goldenBoltsText.text = GameManager.instance.currentGoldenBolts.ToString();
+        normalBoltsText.text = gm.currentNormalBolts.ToString();
+
+        // Activates images if golden bolts are collected
+        if (gm.currentNormalBolts == 1)
+        {
+            goldenBolts1.enabled = true;
+        }
+        if (gm.currentNormalBolts == 2)
+        {
+            goldenBolts2.enabled = true;
+        }
+        if (gm.currentNormalBolts == 3)
+        {
+            goldenBolts3.enabled = true;
+        }
     }
 }

@@ -12,23 +12,12 @@ public class LSResetPosition : MonoBehaviour
     {
         instance = this;
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
-            //Deactivatinsg plaeyr controller before moving the player because character controller is interfering with moving the player
+            //Deactivating player controller before moving the player because character controller is interfering with moving the player
             PlayerController.instance.gameObject.SetActive(false);
 
             PlayerController.instance.transform.position = respawnPosition;
