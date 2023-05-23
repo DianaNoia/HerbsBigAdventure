@@ -1,6 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class LSLevelEntry : MonoBehaviour
@@ -12,6 +12,11 @@ public class LSLevelEntry : MonoBehaviour
     public GameObject mapPointActive, mapPointInactive;
 
     private bool levelLoading;
+
+    // Reference to the game loading screen and bar
+    public GameObject loadingScreen;
+    public Slider loadingBar;
+
 
     // Start is called before the first frame update
     void Start()
@@ -39,11 +44,49 @@ public class LSLevelEntry : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Loads level when space is pressed
         if (Input.GetButtonDown("Jump") && canLoadLevel && levelUnlocked && !levelLoading)
         {
-                StartCoroutine(LevelLoadCo());
-                levelLoading = true;
+            LoadLevel();
         }
+    }
+
+    // Runs coroutine to load level
+    public void LoadLevel()
+    {
+        StartCoroutine(LoadSceneAsynchronously(levelName));
+        levelLoading = true;
+    }
+
+    // Loads the scene asynchronously and shows a loading screen
+    public IEnumerator LoadSceneAsynchronously(string levelName)
+    {
+        PlayerController.instance.stopMove = true;
+        //    UIManager.instance.fadeToBlack = true;
+
+        //    yield return new WaitForSeconds(2f);
+
+        AsyncOperation operation = SceneManager.LoadSceneAsync(levelName);
+
+        //    // SceneManager.LoadScene(levelName);
+
+        loadingScreen.SetActive(true);
+
+        while (!operation.isDone)
+        {
+            float progress = Mathf.Clamp01(operation.progress / .9f);
+
+            Debug.Log("time to load level:" + operation.progress);
+
+            //WaitForSecondsRealtime waitToLoad = new WaitForSecondsRealtime(2f); 
+
+            loadingBar.value = progress;
+
+            // yield return waitToLoad;
+            yield return null;
+        }
+
+        PlayerPrefs.SetString("CurrentLevel", levelName);
     }
 
     public  void OnTriggerEnter(Collider other)
@@ -71,15 +114,22 @@ public class LSLevelEntry : MonoBehaviour
         }
     }
 
-    public IEnumerator LevelLoadCo()
-    {
-        Debug.Log("LOADING");
-        PlayerController.instance.stopMove = true;
-        UIManager.instance.fadeToBlack = true;
+    //public IEnumerator LevelLoadCo()
+    //{
+    //    Debug.Log("LOADING");
+    //    PlayerController.instance.stopMove = true;
+    //    UIManager.instance.fadeToBlack = true;
 
-        yield return new WaitForSeconds(2f);
+    //    yield return new WaitForSeconds(2f);
 
-        SceneManager.LoadScene(levelName);
-        PlayerPrefs.SetString("CurrentLevel", levelName);
-    }
+    //    SceneManager.LoadScene(levelName);
+    //    PlayerPrefs.SetString("CurrentLevel", levelName);
+    //}
+
+
+    //public void LoadScene(int levelIndex)
+    //{
+    //    StartCoroutine(LoadSceneAsynchronously());
+    //}
+
 }
