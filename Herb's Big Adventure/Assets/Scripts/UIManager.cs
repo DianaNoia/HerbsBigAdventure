@@ -17,7 +17,6 @@ public class UIManager : MonoBehaviour
 
     public Text 
         healthText,
-        coinText,
         boltsText,
         goldenBoltsText;
 
