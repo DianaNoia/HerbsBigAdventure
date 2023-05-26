@@ -7,20 +7,31 @@ public class LSLevelEntry : MonoBehaviour
 {
     public string levelName, levelToCheck, displayName;
 
-    private bool canLoadLevel, levelUnlocked;
+    public bool canLoadLevel, levelUnlocked;
 
-    public GameObject mapPointActive, mapPointInactive;
+    [SerializeField] private GameObject mapPointActive, mapPointInactive;
 
-    private bool levelLoading;
+    public bool levelLoading;
 
-    // Reference to the game loading screen and bar
-    public GameObject loadingScreen;
-    public Slider loadingBar;
+    // Loading screen variables
+    [SerializeField] private GameObject loadingScreen, 
+                                        loadingText,
+                                        loadedText, 
+                                        continueIntoLevelText;
+    // Slider
+    [SerializeField] private  Slider slider;
 
+    // Timer to make loading wait
+    private float loadingTimeForLoader = .2f;
+    private float loadingTime = 2f;
+    private float timer;
 
     // Start is called before the first frame update
     void Start()
     {
+        // Set loading bar timer to 0;
+        timer = 0f;
+
         if (PlayerPrefs.GetInt(levelToCheck + "_unlocked") == 1 || levelToCheck == "")
         {
             mapPointActive.SetActive(true);
@@ -45,10 +56,13 @@ public class LSLevelEntry : MonoBehaviour
     void Update()
     {
         // Loads level when space is pressed
-        if (Input.GetButtonDown("Jump") && canLoadLevel && levelUnlocked && !levelLoading)
+        if (Input.GetButtonDown("Jump") && canLoadLevel && levelUnlocked && 
+            !levelLoading)
         {
             LoadLevel();
         }
+
+        
     }
 
     // Runs coroutine to load level
@@ -61,35 +75,58 @@ public class LSLevelEntry : MonoBehaviour
     // Loads the scene asynchronously and shows a loading screen
     public IEnumerator LoadSceneAsynchronously(string levelName)
     {
+        // Stops player, changes background to black
         PlayerController.instance.stopMove = true;
-        //    UIManager.instance.fadeToBlack = true;
+        UIManager.instance.fadeToBlack = true;
 
-        //    yield return new WaitForSeconds(2f);
-
-        AsyncOperation operation = SceneManager.LoadSceneAsync(levelName);
-
-        //    // SceneManager.LoadScene(levelName);
-
+        // Turns on the loading screen
         loadingScreen.SetActive(true);
 
-        while (!operation.isDone)
+        // Loads actual level scene
+        AsyncOperation levelScene = SceneManager.LoadSceneAsync(levelName);
+        levelScene.allowSceneActivation = false;
+
+        // Waits before fake loading bar starts
+        yield return new WaitForSeconds(loadingTimeForLoader);
+
+        while (!levelScene.isDone)
         {
-            float progress = Mathf.Clamp01(operation.progress / .9f);
+            if (levelScene.progress >= 0.9f)
+            {
+                if (timer < loadingTime)
+                {
+                    Debug.Log("entered timer");
 
-            Debug.Log("time to load level:" + operation.progress);
+                    timer += Time.deltaTime;
+                    UpdateProgressBar();
+                }
+                else
+                {
+                    loadingText.SetActive(false);
+                    loadedText.SetActive(true);
+                    continueIntoLevelText.SetActive(true);
 
-            //WaitForSecondsRealtime waitToLoad = new WaitForSecondsRealtime(2f); 
+                    if (Input.GetKeyDown(KeyCode.Space))
+                    {
+                        // Loading is almost complete, allow the target scene to activate
+                        levelScene.allowSceneActivation = true;
+                    }
+                }
+            }
 
-            loadingBar.value = progress;
-
-            // yield return waitToLoad;
             yield return null;
         }
 
         PlayerPrefs.SetString("CurrentLevel", levelName);
     }
 
-    public  void OnTriggerEnter(Collider other)
+    private void UpdateProgressBar()
+    {
+        float progress = timer / loadingTime;
+        slider.value = progress;
+    }
+
+    public void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
