@@ -222,6 +222,18 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_normalBolts", currentNormalBolts);
         }
 
+        if (PlayerPrefs.HasKey(SceneManager.GetActiveScene().name + "_goldenBolts"))
+        {
+            if (currentGoldenBolts > PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + "_goldenBolts"))
+            {
+                PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_goldenBolts", currentGoldenBolts);
+            }
+        }
+        else
+        {
+            PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_goldenBolts", currentGoldenBolts);
+        }
+
         SceneManager.LoadScene(levelToLoad);   
     }
 }

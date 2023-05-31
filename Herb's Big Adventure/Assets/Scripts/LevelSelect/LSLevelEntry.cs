@@ -5,13 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class LSLevelEntry : MonoBehaviour
 {
-    public string levelName, levelToCheck, displayName;
+    [SerializeField]
+    private LSUIManager lsUIManager;
+
+    public string levelName, levelToCheck, displayName, valueOfNormalBoltsEachLevel;
 
     public bool canLoadLevel, levelUnlocked;
+    public bool levelLoading;
 
     [SerializeField] private GameObject mapPointActive, mapPointInactive;
 
-    public bool levelLoading;
 
     // Loading screen variables
     [SerializeField] private GameObject loadingScreen, 
@@ -25,6 +28,8 @@ public class LSLevelEntry : MonoBehaviour
     private float loadingTimeForLoader = .2f;
     private float loadingTime = 2f;
     private float timer;
+
+    //public int goldenBoltsValue = PlayerPrefs.GetInt("_goldenBolts", 0);
 
     // Start is called before the first frame update
     void Start()
@@ -50,6 +55,8 @@ public class LSLevelEntry : MonoBehaviour
             PlayerController.instance.transform.position = transform.position;
             LSResetPosition.instance.respawnPosition = transform.position;
         }
+
+
     }
 
     // Update is called once per frame
@@ -61,8 +68,6 @@ public class LSLevelEntry : MonoBehaviour
         {
             LoadLevel();
         }
-
-        
     }
 
     // Runs coroutine to load level
@@ -128,6 +133,8 @@ public class LSLevelEntry : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
+        int goldenBolts = PlayerPrefs.GetInt(levelName + "_goldenBolts");
+
         if (other.tag == "Player")
         {
             Debug.Log("ENTER COLLIDER");
@@ -136,6 +143,50 @@ public class LSLevelEntry : MonoBehaviour
 
             LSUIManager.instance.lNamePanel.SetActive(true);
             LSUIManager.instance.lNameText.text = displayName;
+
+            if (PlayerPrefs.HasKey(levelName + "_normalBolts"))
+            {
+                LSUIManager.instance.normalBoltsText.text = PlayerPrefs.GetInt(levelName + "_normalBolts").ToString() + " / " + valueOfNormalBoltsEachLevel.ToString();
+            }
+            else
+            {
+                LSUIManager.instance.normalBoltsText.text = "?";
+            }
+
+            if (PlayerPrefs.HasKey(levelName + "_goldenBolts"))
+            {
+                Debug.Log("Quantity of golden bolts: " + PlayerPrefs.GetInt(levelName + "_goldenBolts").ToString());
+
+                if (goldenBolts  == 1)
+                {
+                    Debug.Log("1 golden bolt");
+
+                    LSUIManager.instance.goldenBolts1.SetActive(true);
+                }
+                else if (goldenBolts == 2)
+                {
+                    Debug.Log("2 golden bolts");
+
+                    LSUIManager.instance.goldenBolts1.SetActive(true);
+                    LSUIManager.instance.goldenBolts2.SetActive(true);
+
+                    Debug.Log("PRINTED");
+                }
+                else if (goldenBolts == 3)
+                {
+                    Debug.Log("3 golden bolts");
+
+                    LSUIManager.instance.goldenBolts1.SetActive(true);
+                    LSUIManager.instance.goldenBolts2.SetActive(true);
+                    LSUIManager.instance.goldenBolts3.SetActive(true);
+                }
+                else if (goldenBolts == 0)
+                {
+                    LSUIManager.instance.goldenBolts1.SetActive(false);
+                    LSUIManager.instance.goldenBolts2.SetActive(false);
+                    LSUIManager.instance.goldenBolts3.SetActive(false);
+                }
+            }
         }
     }
 
@@ -148,6 +199,10 @@ public class LSLevelEntry : MonoBehaviour
             LSUIManager.instance.lNamePanel.SetActive(false);
 
             Debug.Log("EXIT COLLIDER");
+
+            LSUIManager.instance.goldenBolts1.SetActive(false);
+            LSUIManager.instance.goldenBolts2.SetActive(false);
+            LSUIManager.instance.goldenBolts3.SetActive(false);
         }
     }
 

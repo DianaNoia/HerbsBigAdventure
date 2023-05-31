@@ -382,9 +382,9 @@ MonoBehaviour:
   lNameText: {fileID: 1272579252}
   lNamePanel: {fileID: 2146864479}
   normalBoltsText: {fileID: 777220776}
-  goldenBolts1: {fileID: 365895241}
-  goldenBolts2: {fileID: 1348028505}
-  goldenBolts3: {fileID: 689835174}
+  goldenBolts1: {fileID: 365895239}
+  goldenBolts2: {fileID: 1348028503}
+  goldenBolts3: {fileID: 689835172}
 --- !u!1001 &93693299
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1399,7 +1399,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &365895240
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2728,6 +2728,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3506075659137723055, guid: 61141f7f9dc5acf4b9dc9e97205024b5, type: 3}
+      propertyPath: goldenBolts1
+      value: 
+      objectReference: {fileID: 365895239}
+    - target: {fileID: 3506075659137723055, guid: 61141f7f9dc5acf4b9dc9e97205024b5, type: 3}
+      propertyPath: goldenBolts2
+      value: 
+      objectReference: {fileID: 1348028503}
+    - target: {fileID: 3506075659137723055, guid: 61141f7f9dc5acf4b9dc9e97205024b5, type: 3}
+      propertyPath: goldenBolts3
+      value: 
+      objectReference: {fileID: 689835172}
+    - target: {fileID: 3506075659137723055, guid: 61141f7f9dc5acf4b9dc9e97205024b5, type: 3}
       propertyPath: controlsScreen
       value: 
       objectReference: {fileID: 1937974708}
@@ -3251,7 +3263,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &689835173
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3990,6 +4002,10 @@ PrefabInstance:
       propertyPath: continueIntoLevelText
       value: 
       objectReference: {fileID: 6533004071213130508}
+    - target: {fileID: 8412576513621556264, guid: 48bf893ede8893e44a65068c1bcc4ada, type: 3}
+      propertyPath: valueOfNormalBoltsEachLevel
+      value: 45
+      objectReference: {fileID: 0}
     - target: {fileID: 8412576513621556266, guid: 48bf893ede8893e44a65068c1bcc4ada, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -4079,8 +4095,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -249, y: -51.192}
-  m_SizeDelta: {x: 234.2213, y: 164.36}
+  m_AnchoredPosition: {x: -172.94022, y: -51.192}
+  m_SizeDelta: {x: 386.3495, y: 164.36}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &777220776
 MonoBehaviour:
@@ -4104,10 +4120,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 3baaf6a0f102a6940bbb522fd282dd60, type: 3}
-    m_FontSize: 90
+    m_FontSize: 70
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 9
+    m_MinSize: 6
     m_MaxSize: 90
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -6912,7 +6928,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1348028504
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7457,6 +7473,10 @@ PrefabInstance:
       propertyPath: continueIntoLevelText
       value: 
       objectReference: {fileID: 6533004071213130508}
+    - target: {fileID: 8412576513621556264, guid: 48bf893ede8893e44a65068c1bcc4ada, type: 3}
+      propertyPath: valueOfNormalBoltsEachLevel
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 8412576513621556266, guid: 48bf893ede8893e44a65068c1bcc4ada, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -7523,6 +7543,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2017491803}
     - target: {fileID: 8412576513621556264, guid: 48bf893ede8893e44a65068c1bcc4ada, type: 3}
+      propertyPath: levelName
+      value: Boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 8412576513621556264, guid: 48bf893ede8893e44a65068c1bcc4ada, type: 3}
       propertyPath: loadedText
       value: 
       objectReference: {fileID: 941976739}
@@ -7554,6 +7578,10 @@ PrefabInstance:
       propertyPath: continueIntoLevelText
       value: 
       objectReference: {fileID: 6533004071213130508}
+    - target: {fileID: 8412576513621556264, guid: 48bf893ede8893e44a65068c1bcc4ada, type: 3}
+      propertyPath: valueOfNormalBoltsEachLevel
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8412576513621556266, guid: 48bf893ede8893e44a65068c1bcc4ada, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -8079,7 +8107,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1684663438
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10052,37 +10080,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2017491803}
     - target: {fileID: 8412576513621556264, guid: 48bf893ede8893e44a65068c1bcc4ada, type: 3}
-      propertyPath: levelName
-      value: Level1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8412576513621556264, guid: 48bf893ede8893e44a65068c1bcc4ada, type: 3}
       propertyPath: loadedText
       value: 
       objectReference: {fileID: 941976739}
-    - target: {fileID: 8412576513621556264, guid: 48bf893ede8893e44a65068c1bcc4ada, type: 3}
-      propertyPath: loadingBar
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8412576513621556264, guid: 48bf893ede8893e44a65068c1bcc4ada, type: 3}
-      propertyPath: displayName
-      value: '1-1: The Beginning'
-      objectReference: {fileID: 0}
     - target: {fileID: 8412576513621556264, guid: 48bf893ede8893e44a65068c1bcc4ada, type: 3}
       propertyPath: loadingText
       value: 
       objectReference: {fileID: 915375991}
     - target: {fileID: 8412576513621556264, guid: 48bf893ede8893e44a65068c1bcc4ada, type: 3}
-      propertyPath: levelToCheck
+      propertyPath: lsUIManager
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 90723281}
     - target: {fileID: 8412576513621556264, guid: 48bf893ede8893e44a65068c1bcc4ada, type: 3}
       propertyPath: loadingScreen
       value: 
       objectReference: {fileID: 6533004070606787354}
-    - target: {fileID: 8412576513621556264, guid: 48bf893ede8893e44a65068c1bcc4ada, type: 3}
-      propertyPath: minLoadingTime
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 8412576513621556264, guid: 48bf893ede8893e44a65068c1bcc4ada, type: 3}
       propertyPath: continueIntoLevelText
       value: 

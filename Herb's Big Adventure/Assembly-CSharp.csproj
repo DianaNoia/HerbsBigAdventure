@@ -69,7 +69,6 @@
     <Compile Include="Assets\DownloadedAssets\LowPolyWater_Pack\Scripts\LowPolyWater.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\CameraSwitch.cs" />
     <Compile Include="Assets\Scripts\EnemyController.cs" />
-    <Compile Include="Assets\Scripts\GemsPickup.cs" />
     <Compile Include="Assets\Scripts\LevelSelect\LSUIManager.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
     <Compile Include="Assets\Scripts\HurtPlayer.cs" />
