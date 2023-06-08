@@ -340,8 +340,6 @@
 -r:"C:/Users/Diana/source/repos/AP2/Herb's Big Adventure/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll"
 -r:"C:/Users/Diana/source/repos/AP2/Herb's Big Adventure/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/EditorAssetResources/Unity.VisualScripting.TextureAssets.dll"
 -r:"C:/Users/Diana/source/repos/AP2/Herb's Big Adventure/Library/PackageCache/com.unity.visualscripting@1.7.8/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
--r:"Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor-firstpass.ref.dll"
--r:"Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-firstpass.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Cinemachine.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/com.unity.cinemachine.editor.ref.dll"
@@ -375,6 +373,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.TestRunner.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/DownloadedAssets/LowPolyWater_Pack/Scripts/Editor/GeneratePlane.cs"
+"Assets/DownloadedAssets/Standard Assets/Editor/CrossPlatformInput/CrossPlatformInputInitialize.cs"
 -langversion:9.0
 
 /deterministic

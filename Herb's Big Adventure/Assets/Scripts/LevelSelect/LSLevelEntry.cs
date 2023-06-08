@@ -7,20 +7,27 @@ public class LSLevelEntry : MonoBehaviour
 {
     [SerializeField]
     private LSUIManager lsUIManager;
+    [SerializeField]
+    private LevelCompletion levelCompletion;
 
-    public string levelName, levelToCheck, displayName, valueOfNormalBoltsEachLevel;
+    [SerializeField]
+    public string levelName, 
+                    levelToCheck, 
+                    displayName, 
+                    valueOfNormalBoltsEachLevel;
 
-    public bool canLoadLevel, levelUnlocked;
+    public bool canLoadLevel,
+                levelUnlocked;
+
     public bool levelLoading;
 
-    [SerializeField] private GameObject mapPointActive, mapPointInactive;
-
-
-    // Loading screen variables
-    [SerializeField] private GameObject loadingScreen, 
+    [SerializeField] private GameObject mapPointActive, 
+                                        mapPointInactive,
+                                        loadingScreen, 
                                         loadingText,
                                         loadedText, 
-                                        continueIntoLevelText;
+                                        continueIntoLevelText, textIfLevelUnlocked, textIfLevelLocked;
+                                        
     // Slider
     [SerializeField] private  Slider slider;
 
@@ -42,29 +49,33 @@ public class LSLevelEntry : MonoBehaviour
             mapPointActive.SetActive(true);
             mapPointInactive.SetActive(false);
             levelUnlocked = true;
+            //textIfLevelUnlocked.SetActive(true);
+            //textIfLevelLocked.SetActive(false);
         }
         else
         {
             mapPointActive.SetActive(false);
             mapPointInactive.SetActive(true);
             levelUnlocked = false;
+            //textIfLevelUnlocked.SetActive(false);
+            //textIfLevelLocked.SetActive(true);
+
         }
+
+        
 
         if (PlayerPrefs.GetString("CurrentLevel") == levelName)
         {
             PlayerController.instance.transform.position = transform.position;
             LSResetPosition.instance.respawnPosition = transform.position;
         }
-
-
     }
 
     // Update is called once per frame
     void Update()
     {
         // Loads level when space is pressed
-        if (Input.GetButtonDown("Jump") && canLoadLevel && levelUnlocked && 
-            !levelLoading)
+        if (Input.GetButtonDown("Jump") && canLoadLevel && levelUnlocked && !levelLoading)
         {
             LoadLevel();
         }
@@ -100,8 +111,6 @@ public class LSLevelEntry : MonoBehaviour
             {
                 if (timer < loadingTime)
                 {
-                    Debug.Log("entered timer");
-
                     timer += Time.deltaTime;
                     UpdateProgressBar();
                 }
@@ -133,76 +142,110 @@ public class LSLevelEntry : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
+        Debug.Log("OnTriggerEnter called");
+
         int goldenBolts = PlayerPrefs.GetInt(levelName + "_goldenBolts");
 
         if (other.tag == "Player")
         {
-            Debug.Log("ENTER COLLIDER");
-
             canLoadLevel = true;
 
-            LSUIManager.instance.lNamePanel.SetActive(true);
-            LSUIManager.instance.lNameText.text = displayName;
+            lsUIManager.lNamePanel.SetActive(true);
+            lsUIManager.lNameText.text = displayName;
 
             if (PlayerPrefs.HasKey(levelName + "_normalBolts"))
             {
-                LSUIManager.instance.normalBoltsText.text = PlayerPrefs.GetInt(levelName + "_normalBolts").ToString() + " / " + valueOfNormalBoltsEachLevel.ToString();
+                lsUIManager.normalBoltsText.text = PlayerPrefs.GetInt(levelName + "_normalBolts").ToString() + " / " + valueOfNormalBoltsEachLevel.ToString();
             }
             else
             {
-                LSUIManager.instance.normalBoltsText.text = "?";
+                lsUIManager.normalBoltsText.text = "?";
             }
 
             if (PlayerPrefs.HasKey(levelName + "_goldenBolts"))
             {
                 Debug.Log("Quantity of golden bolts: " + PlayerPrefs.GetInt(levelName + "_goldenBolts").ToString());
 
+                // When there is 1 gb unlocked in a level
                 if (goldenBolts  == 1)
                 {
-                    Debug.Log("1 golden bolt");
+                    lsUIManager.goldenBolts1.SetActive(true);
 
-                    LSUIManager.instance.goldenBolts1.SetActive(true);
+                    lsUIManager.placeHolder1.SetActive(false);
+                    lsUIManager.placeHolder2.SetActive(true);
+                    lsUIManager.placeHolder3.SetActive(true);
                 }
+                // When there is 2 gb unlocked in a level
                 else if (goldenBolts == 2)
                 {
-                    Debug.Log("2 golden bolts");
+                    lsUIManager.goldenBolts1.SetActive(true);
+                    lsUIManager.goldenBolts2.SetActive(true);
 
-                    LSUIManager.instance.goldenBolts1.SetActive(true);
-                    LSUIManager.instance.goldenBolts2.SetActive(true);
-
-                    Debug.Log("PRINTED");
+                    lsUIManager.placeHolder1.SetActive(false);
+                    lsUIManager.placeHolder2.SetActive(false);
+                    lsUIManager.placeHolder3.SetActive(true);
                 }
+                // When there is 3 gb unlocked in a level
                 else if (goldenBolts == 3)
                 {
-                    Debug.Log("3 golden bolts");
+                    lsUIManager.goldenBolts1.SetActive(true);
+                    lsUIManager.goldenBolts2.SetActive(true);
+                    lsUIManager.goldenBolts3.SetActive(true);
 
-                    LSUIManager.instance.goldenBolts1.SetActive(true);
-                    LSUIManager.instance.goldenBolts2.SetActive(true);
-                    LSUIManager.instance.goldenBolts3.SetActive(true);
+                    lsUIManager.placeHolder1.SetActive(false);
+                    lsUIManager.placeHolder2.SetActive(false);
+                    lsUIManager.placeHolder3.SetActive(false);
                 }
+                // When there is 0 gb unlocked in a level
                 else if (goldenBolts == 0)
                 {
-                    LSUIManager.instance.goldenBolts1.SetActive(false);
-                    LSUIManager.instance.goldenBolts2.SetActive(false);
-                    LSUIManager.instance.goldenBolts3.SetActive(false);
+                    lsUIManager.goldenBolts1.SetActive(false);
+                    lsUIManager.goldenBolts2.SetActive(false);
+                    lsUIManager.goldenBolts3.SetActive(false);
+
+                    lsUIManager.placeHolder1.SetActive(true);
+                    lsUIManager.placeHolder2.SetActive(true);
+                    lsUIManager.placeHolder3.SetActive(true);
                 }
             }
+        }
+
+        levelCompletion.CalculatePercentComplete();
+
+        if (levelUnlocked)
+        {
+            Debug.Log("Level is unlocked: " + levelName);
+
+            textIfLevelUnlocked.SetActive(true);
+            textIfLevelLocked.SetActive(false);
+        }
+
+        if (!levelUnlocked)
+        {
+            Debug.Log("Level is locked: " + levelName);
+
+            textIfLevelUnlocked.SetActive(false);
+            textIfLevelLocked.SetActive(true);
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
+        Debug.Log("OnTriggerExit called");
+
         if (other.tag == "Player")
         {
             canLoadLevel = false;
 
-            LSUIManager.instance.lNamePanel.SetActive(false);
+            lsUIManager.lNamePanel.SetActive(false);
 
-            Debug.Log("EXIT COLLIDER");
+            lsUIManager.goldenBolts1.SetActive(false);
+            lsUIManager.goldenBolts2.SetActive(false);
+            lsUIManager.goldenBolts3.SetActive(false);
 
-            LSUIManager.instance.goldenBolts1.SetActive(false);
-            LSUIManager.instance.goldenBolts2.SetActive(false);
-            LSUIManager.instance.goldenBolts3.SetActive(false);
+            lsUIManager.placeHolder1.SetActive(true);
+            lsUIManager.placeHolder2.SetActive(true);
+            lsUIManager.placeHolder3.SetActive(true);
         }
     }
 

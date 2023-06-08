@@ -337,7 +337,6 @@
 "Assets/Scripts/EnemyController.cs"
 "Assets/Scripts/EnemyHealthManager.cs"
 "Assets/Scripts/GameManager.cs"
-"Assets/Scripts/GemsPickup.cs"
 "Assets/Scripts/GoldenBoltPickup.cs"
 "Assets/Scripts/HealthManager.cs"
 "Assets/Scripts/HealthPickup.cs"

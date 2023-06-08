@@ -29,6 +29,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     public bool isRespawning;
 
+    private string currentScene;
+
     // [SerializeField]
     // private bool controlsShown = false;
 
@@ -54,8 +56,8 @@ public class GameManager : MonoBehaviour
 
         // Respawn position reset
         respawnPosition = PlayerController.instance.transform.position;
-
-        //OpenControls();
+        
+        currentScene = SceneManager.GetActiveScene().name;
     }
 
     private void Update()
@@ -154,49 +156,47 @@ public class GameManager : MonoBehaviour
 
     public void PauseUnpause()
     {
-        if (UIManager.instance.pauseScreen.activeInHierarchy)
+        if (currentScene == "LevelSelect")
         {
-            UIManager.instance.pauseScreen.SetActive(false);
-            Time.timeScale = 1f;
+            if (UIManager.instance.pauseScreenInLevelSelect.activeInHierarchy)
+            {
+                UIManager.instance.pauseScreenInLevelSelect.SetActive(false);
+                Time.timeScale = 1f;
 
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
+            }
+            else
+            {
+                UIManager.instance.pauseScreenInLevelSelect.SetActive(true);
+                UIManager.instance.CloseOptions();
+                Time.timeScale = 0f;
+
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.Confined;
+            }
         }
         else
         {
-            UIManager.instance.pauseScreen.SetActive(true);
-            UIManager.instance.CloseOptions();
-            Time.timeScale = 0f;
+            if (UIManager.instance.pauseScreenInGame.activeInHierarchy)
+            {
+                UIManager.instance.pauseScreenInGame.SetActive(false);
+                Time.timeScale = 1f;
 
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.Confined;
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
+            }
+            else
+            {
+                UIManager.instance.pauseScreenInGame.SetActive(true);
+                UIManager.instance.CloseOptions();
+                Time.timeScale = 0f;
+
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.Confined;
+            }
         }
     }
-
-    //public void OpenControls()
-    //{
-    //    if (currentLevel == "Level1")
-    //    {
-    //        if (UIManager.instance.controlsScreen.activeInHierarchy && controlsShown)
-    //        {
-    //            UIManager.instance.controlsScreen.SetActive(false);
-    //            Time.timeScale = 1f;
-
-    //            Cursor.visible = false;
-    //            Cursor.lockState = CursorLockMode.Locked;
-    //        }
-    //        else if (!UIManager.instance.controlsScreen.activeInHierarchy && !controlsShown)
-    //        {
-    //            UIManager.instance.controlsScreen.SetActive(true);
-    //            Time.timeScale = 0f;
-
-    //            controlsShown = true;
-
-    //            Cursor.visible = true;
-    //            Cursor.lockState = CursorLockMode.None;
-    //        }            
-    //    }
-    //}
 
     public IEnumerator LevelEndCo()
     {
