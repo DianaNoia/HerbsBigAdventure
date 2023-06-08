@@ -433,6 +433,7 @@
 "Assets/Scripts/CameraController.cs"
 "Assets/Scripts/Checkpoints.cs"
 "Assets/Scripts/ControlsScreen.cs"
+"Assets/Scripts/Crates/CrateController.cs"
 "Assets/Scripts/DestroyOverTime.cs"
 "Assets/Scripts/Enemies/BossActivator.cs"
 "Assets/Scripts/Enemies/BossController.cs"

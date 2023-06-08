@@ -11,7 +11,7 @@ public class EnemyHealthManager : MonoBehaviour
     private EnemyEffects enemyEffects;
 
     [SerializeField]
-    public int maxHealth = 1;
+    public int maxHealth;
     [SerializeField]
     public int currentHealth;
 

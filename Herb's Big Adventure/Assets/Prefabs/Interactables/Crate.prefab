@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4596680644366701266}
-  - component: {fileID: 4596680644366701267}
   - component: {fileID: 4596680644366701264}
+  - component: {fileID: 7990554472069162050}
   m_Layer: 0
   m_Name: Crate
   m_TagString: Enemy
@@ -34,22 +34,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4596680644366701267
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4596680644366701265}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a792cecd13d8e1e4daab72eeec991ecc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 1
-  deathSound: 6
-  deathEffect: {fileID: 9075779683149004032, guid: df47e7cbc55d30b4992f24e9769c699f, type: 3}
-  itemToDrop: {fileID: 7941716353339891309, guid: 70d40e6de4515b8438bbb8feb18f15e4, type: 3}
 --- !u!65 &4596680644366701264
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -63,6 +47,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.7, y: 0.14301085, z: 0.7}
   m_Center: {x: 0, y: 0.34388703, z: 0}
+--- !u!114 &7990554472069162050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4596680644366701265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ddd7e737117f54dabc1b20a8081c95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  breakSound: 6
+  breakEffect: {fileID: 9075779683149004032, guid: df47e7cbc55d30b4992f24e9769c699f, type: 3}
+  itemToDrop: {fileID: 7941716353339891309, guid: 70d40e6de4515b8438bbb8feb18f15e4, type: 3}
 --- !u!1001 &4596680645405160323
 PrefabInstance:
   m_ObjectHideFlags: 0
