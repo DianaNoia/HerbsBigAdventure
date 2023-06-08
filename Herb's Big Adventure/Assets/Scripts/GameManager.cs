@@ -112,7 +112,7 @@ public class GameManager : MonoBehaviour
     {
         PlayerController.instance.gameObject.SetActive(false);
 
-        CameraController.instance.theCMBrain.enabled = false;
+        //CameraController.instance.theCMBrain.enabled = false;
 
         // Fades screen to black after dying
         UIManager.instance.fadeToBlack = true;
@@ -132,7 +132,7 @@ public class GameManager : MonoBehaviour
 
         PlayerController.instance.transform.position = respawnPosition;
 
-        CameraController.instance.theCMBrain.enabled = true;
+        //CameraController.instance.theCMBrain.enabled = true;
 
         PlayerController.instance.gameObject.SetActive(true);
     }

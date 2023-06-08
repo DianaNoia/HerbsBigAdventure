@@ -38757,8 +38757,8 @@ Transform:
   m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1204879378374010502}
   - {fileID: 7327808014345786541}
+  - {fileID: 1204879378374010502}
   - {fileID: 6050012995020768505}
   - {fileID: 4980748384272720240}
   m_Father: {fileID: 0}
@@ -38823,7 +38823,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a792cecd13d8e1e4daab72eeec991ecc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyEffects: {fileID: 0}
   maxHealth: 3
+  currentHealth: 0
+  minHealth: 0
   deathSound: 6
   anim: {fileID: 7273955418224290361}
   deathEffect: {fileID: 9075779683149004032, guid: df47e7cbc55d30b4992f24e9769c699f, type: 3}
@@ -54494,7 +54497,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4916635381291120, guid: d976f40eeef2f7f498bce58dfe484aaa, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4916635381291120, guid: d976f40eeef2f7f498bce58dfe484aaa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -54685,7 +54688,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7539522403395165279, guid: cfd52433c2081db47b83623fd9394d6f, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7539522403395165279, guid: cfd52433c2081db47b83623fd9394d6f, type: 3}
       propertyPath: m_LocalScale.x

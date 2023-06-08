@@ -3291,6 +3291,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: AreYouSureMM_InGame
       objectReference: {fileID: 0}
+    - target: {fileID: 1738173056, guid: a3967d077a897014aa7454ae30c6e332, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1815455342, guid: a3967d077a897014aa7454ae30c6e332, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: AreYouSureMM_NO_InLS
