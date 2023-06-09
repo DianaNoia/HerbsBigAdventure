@@ -2561,6 +2561,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97ce28267c9168546bf301a71dcecba2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pc: {fileID: 0}
   deathEffect: {fileID: 3525138764905867911, guid: d32e90e1fcd475c4eba2b9334b98dfb8, type: 3}
   currentNormalBolts: 0
   currentGoldenBolts: 0

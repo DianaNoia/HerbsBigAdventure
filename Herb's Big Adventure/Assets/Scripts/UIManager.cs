@@ -19,6 +19,13 @@ public class UIManager : MonoBehaviour
                 boltsText,
                 goldenBoltsText;
 
+    public GameObject goldenBoltImage, 
+                        goldenBoltImage2, 
+                        goldenBoltImage3, 
+                        goldenBoltImageTransparent, 
+                        goldenBoltImageTransparent2, 
+                        goldenBoltImageTransparent3;
+
     public GameObject pauseScreenInGame,
                         pauseScreenInLevelSelect,
                         optionsScreen,
@@ -36,6 +43,12 @@ public class UIManager : MonoBehaviour
     public void Awake()
     {
         uim = this;
+    }
+
+    private void Start()
+    {
+        uim = FindObjectOfType<UIManager>();
+        gm = FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame

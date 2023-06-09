@@ -33,8 +33,10 @@ public class HealthManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gm = FindObjectOfType<GameManager>();
+        am = FindObjectOfType<AudioManager>(); 
+        pc = FindObjectOfType<PlayerController>();
         hm = FindObjectOfType<HealthManager>();
-
         uim = FindObjectOfType<UIManager>();
 
         ResetHealth();

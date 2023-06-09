@@ -44,6 +44,7 @@ public class LSLevelEntry : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        uim = FindObjectOfType<UIManager>();
         // Set loading bar timer to 0;
         timer = 0f;
 
@@ -123,11 +124,11 @@ public class LSLevelEntry : MonoBehaviour
                     loadedText.SetActive(true);
                     continueIntoLevelText.SetActive(true);
 
-                    if (Input.GetKeyDown(KeyCode.Space))
-                    {
-                        // Loading is almost complete, allow the target scene to activate
-                        levelScene.allowSceneActivation = true;
-                    }
+                    //if (Input.GetKeyDown(KeyCode.Space))
+                    //{
+                    //    // Loading is almost complete, allow the target scene to activate
+                    //    levelScene.allowSceneActivation = true;
+                    //}
                 }
             }
 

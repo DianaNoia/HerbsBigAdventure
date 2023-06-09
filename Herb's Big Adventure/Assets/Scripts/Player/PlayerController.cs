@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
                 attackedCharged;
 
     // Colliders for each of the attacks
-    public GameObject hurtBox, weaponHurtBox, chargedHurtBox;
+    public GameObject hurtBox, chargedHurtBox;
 
     // Bool to check if player has picked up weapon
     public bool hasWeapon = false;
@@ -69,7 +69,6 @@ public class PlayerController : MonoBehaviour
         attackedCharged = false;
 
         hurtBox.SetActive(false);
-        weaponHurtBox.SetActive(false);
         chargedHurtBox.SetActive(false);
 
         anim = GetComponent<Animator>();

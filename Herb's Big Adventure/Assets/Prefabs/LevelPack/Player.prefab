@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 527519319}
   m_Layer: 0
   m_Name: EnemyHurtbox Charded Attack
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 845565740}
   m_Layer: 0
   m_Name: EnemyHurtbox Normal Attack
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -247,7 +247,6 @@ MonoBehaviour:
   attacked: 0
   attackedCharged: 0
   hurtBox: {fileID: 845565736}
-  weaponHurtBox: {fileID: 0}
   chargedHurtBox: {fileID: 654588822}
   hasWeapon: 0
   weapon: {fileID: 1437865737192171476}

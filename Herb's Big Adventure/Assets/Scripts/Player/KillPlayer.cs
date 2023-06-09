@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class KillPlayer : MonoBehaviour
 {
-    [SerializeField]
     private GameManager gm;
+
+    private void Start()
+    {
+        gm = FindObjectOfType<GameManager>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {

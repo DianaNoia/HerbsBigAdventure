@@ -11,6 +11,13 @@ public class LevelExit : MonoBehaviour
 
     public bool givesWeapon;
 
+
+    private void Start()
+    {
+        pc = FindObjectOfType<PlayerController>();
+        gm = FindObjectOfType<GameManager>();
+
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")

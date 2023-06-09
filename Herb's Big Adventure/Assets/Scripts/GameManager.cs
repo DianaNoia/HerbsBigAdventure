@@ -160,7 +160,34 @@ public class GameManager : MonoBehaviour
     public void AddGoldenBolts(int goldenBoltsToAdd)
     {
         currentGoldenBolts += goldenBoltsToAdd;
-        uim.goldenBoltsText.text = currentGoldenBolts.ToString();
+        if (currentGoldenBolts == 1)
+        {
+            uim.goldenBoltImage.SetActive(true);
+            uim.goldenBoltImage2.SetActive(false);
+            uim.goldenBoltImage3.SetActive(false);
+            uim.goldenBoltImageTransparent.SetActive(false);
+            uim.goldenBoltImageTransparent2.SetActive(true);
+            uim.goldenBoltImageTransparent3.SetActive(true);
+        }
+        if (currentGoldenBolts == 2)
+        {
+            uim.goldenBoltImage.SetActive(true);
+            uim.goldenBoltImage2.SetActive(true);
+            uim.goldenBoltImage3.SetActive(false);
+            uim.goldenBoltImageTransparent.SetActive(false);
+            uim.goldenBoltImageTransparent2.SetActive(false);
+            uim.goldenBoltImageTransparent3.SetActive(true);
+        }
+        if (currentGoldenBolts == 3)
+        {
+            uim.goldenBoltImage.SetActive(true);
+            uim.goldenBoltImage2.SetActive(true);
+            uim.goldenBoltImage3.SetActive(true);
+            uim.goldenBoltImageTransparent.SetActive(false);
+            uim.goldenBoltImageTransparent2.SetActive(false);
+            uim.goldenBoltImageTransparent3.SetActive(false);
+        }
+        //uim.goldenBoltsText.text = currentGoldenBolts.ToString();
     }
 
     public void PauseUnpause()

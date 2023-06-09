@@ -13,6 +13,12 @@ public class Checkpoints : MonoBehaviour
 
     public bool hasPlayed = false;
 
+    private void Start()
+    {
+        gm = FindObjectOfType<GameManager>();
+        am = FindObjectOfType<AudioManager>();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag =="Player")
