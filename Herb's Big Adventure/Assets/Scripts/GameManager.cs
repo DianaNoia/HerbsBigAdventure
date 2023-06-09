@@ -5,8 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance;
-    PlayerController pc;
+    private HealthManager hm;
+    private UIManager uim;
+    public PlayerController pc;
+    private AudioManager am;
+    private GameManager gm;
 
     private Vector3 respawnPosition;
 
@@ -42,7 +45,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
+        gm = this;
     }
 
     // Start is called before the first frame update
@@ -54,8 +57,14 @@ public class GameManager : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
 
+        pc = FindObjectOfType<PlayerController>();
+        hm = FindObjectOfType<HealthManager>();
+        uim = FindObjectOfType<UIManager>();
+        am = FindObjectOfType<AudioManager>();
+        gm = FindObjectOfType<GameManager>();
+
         // Respawn position reset
-        respawnPosition = PlayerController.instance.transform.position;
+        respawnPosition = pc.transform.position;
         
         currentScene = SceneManager.GetActiveScene().name;
     }
@@ -104,7 +113,7 @@ public class GameManager : MonoBehaviour
     {
         StartCoroutine(RespawnCo());
 
-        HealthManager.instance.PlayerKilled();
+        hm.PlayerKilled();
     }
 
     // Deactivates player, waits and sets it back in respawn position, activating it again
@@ -115,7 +124,7 @@ public class GameManager : MonoBehaviour
         //CameraController.instance.theCMBrain.enabled = false;
 
         // Fades screen to black after dying
-        UIManager.instance.fadeToBlack = true;
+        uim.fadeToBlack = true;
 
         // Death effect
         Instantiate(deathEffect, PlayerController.instance.transform.position + new Vector3(0f, 1f, 0f), PlayerController.instance.transform.rotation);
@@ -125,10 +134,10 @@ public class GameManager : MonoBehaviour
         isRespawning = true;
 
         // Resets health when respawn
-        HealthManager.instance.ResetHealth();
+        hm.ResetHealth();
 
         // Fades screen back when respawning
-        UIManager.instance.fadeFromBlack = true;
+        uim.fadeFromBlack = true;
 
         PlayerController.instance.transform.position = respawnPosition;
 
@@ -145,22 +154,22 @@ public class GameManager : MonoBehaviour
     public void AddNormalBolts(int normalBoltsToAdd)
     {
         currentNormalBolts += normalBoltsToAdd;
-        UIManager.instance.boltsText.text = currentNormalBolts.ToString();
+        uim.boltsText.text = currentNormalBolts.ToString();
     }
 
     public void AddGoldenBolts(int goldenBoltsToAdd)
     {
         currentGoldenBolts += goldenBoltsToAdd;
-        UIManager.instance.goldenBoltsText.text = currentGoldenBolts.ToString();
+        uim.goldenBoltsText.text = currentGoldenBolts.ToString();
     }
 
     public void PauseUnpause()
     {
         if (currentScene == "LevelSelect")
         {
-            if (UIManager.instance.pauseScreenInLevelSelect.activeInHierarchy)
+            if (uim.pauseScreenInLevelSelect.activeInHierarchy)
             {
-                UIManager.instance.pauseScreenInLevelSelect.SetActive(false);
+                uim.pauseScreenInLevelSelect.SetActive(false);
                 Time.timeScale = 1f;
 
                 Cursor.visible = false;
@@ -168,8 +177,8 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                UIManager.instance.pauseScreenInLevelSelect.SetActive(true);
-                UIManager.instance.CloseOptions();
+                uim.pauseScreenInLevelSelect.SetActive(true);
+                uim.CloseOptions();
                 Time.timeScale = 0f;
 
                 Cursor.visible = true;
@@ -178,9 +187,9 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            if (UIManager.instance.pauseScreenInGame.activeInHierarchy)
+            if (uim.pauseScreenInGame.activeInHierarchy)
             {
-                UIManager.instance.pauseScreenInGame.SetActive(false);
+                uim.pauseScreenInGame.SetActive(false);
                 Time.timeScale = 1f;
 
                 Cursor.visible = false;
@@ -188,8 +197,8 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                UIManager.instance.pauseScreenInGame.SetActive(true);
-                UIManager.instance.CloseOptions();
+                uim.pauseScreenInGame.SetActive(true);
+                uim.CloseOptions();
                 Time.timeScale = 0f;
 
                 Cursor.visible = true;
@@ -200,10 +209,10 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator LevelEndCo()
     {
-        AudioManager.instance.PlayMusic(levelEndMusic);
+        am.PlayMusic(levelEndMusic);
         PlayerController.instance.stopMove = true;
 
-        UIManager.instance.fadeToBlack = true;
+        uim.fadeToBlack = true;
 
         yield return new WaitForSeconds(2f);
         Debug.Log("level ended");

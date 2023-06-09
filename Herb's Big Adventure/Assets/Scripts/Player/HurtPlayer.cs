@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class HurtPlayer : MonoBehaviour
 {
+    private HealthManager hm;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
-            HealthManager.instance.Hurt();
+            hm.Hurt();
         }
     }
 }

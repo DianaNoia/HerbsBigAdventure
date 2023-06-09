@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class LSLevelEntry : MonoBehaviour
 {
+    private UIManager uim;
+
     [SerializeField]
     private LSUIManager lsUIManager;
     [SerializeField]
@@ -21,12 +23,13 @@ public class LSLevelEntry : MonoBehaviour
 
     public bool levelLoading;
 
-    [SerializeField] private GameObject mapPointActive, 
-                                        mapPointInactive,
-                                        loadingScreen, 
-                                        loadingText,
-                                        loadedText, 
-                                        continueIntoLevelText, textIfLevelUnlocked, textIfLevelLocked;
+    [SerializeField] 
+    private GameObject mapPointActive, 
+                        mapPointInactive,
+                        loadingScreen, 
+                        loadingText,
+                        loadedText, 
+                        continueIntoLevelText, textIfLevelUnlocked, textIfLevelLocked;
                                         
     // Slider
     [SerializeField] private  Slider slider;
@@ -93,7 +96,7 @@ public class LSLevelEntry : MonoBehaviour
     {
         // Stops player, changes background to black
         PlayerController.instance.stopMove = true;
-        UIManager.instance.fadeToBlack = true;
+        uim.fadeToBlack = true;
 
         // Turns on the loading screen
         loadingScreen.SetActive(true);

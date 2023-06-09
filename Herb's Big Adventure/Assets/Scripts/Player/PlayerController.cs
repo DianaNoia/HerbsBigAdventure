@@ -43,9 +43,8 @@ public class PlayerController : MonoBehaviour
     private float holdDownTime = 0;
 
     // Bools to check which attacked occured
-    public bool    attackedNormal = false, 
-                   attackedWithWeapon = false, 
-                   attackedCharged = false;
+    public bool attacked, 
+                attackedCharged;
 
     // Colliders for each of the attacks
     public GameObject hurtBox, weaponHurtBox, chargedHurtBox;
@@ -65,6 +64,9 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         theCam = Camera.main;
+
+        attacked = false;
+        attackedCharged = false;
 
         hurtBox.SetActive(false);
         weaponHurtBox.SetActive(false);
@@ -164,7 +166,6 @@ public class PlayerController : MonoBehaviour
         // Call the crouch and attack when they are activated
         Crouching();
         Attacking();
-        AttackingWithWeapon(); 
         SwingAttackWithWeapon();
 
         anim.SetFloat("Speed", Mathf.Abs(moveDirection.x) + Mathf.Abs(moveDirection.z));
@@ -269,39 +270,20 @@ public class PlayerController : MonoBehaviour
     // Attack basick
     public void Attacking()
     {
-        if (!hasWeapon)
+        if (hasWeapon)
         {
             if (Input.GetMouseButtonDown(0))
             {
+                Debug.Log("Has weapon");
+
                 anim.SetTrigger("Attacking");
                 Debug.Log("ATTACK");
 
-                attackedNormal = true;
+                attacked = true;
             }
             if (Input.GetMouseButtonUp(0))
             {
-                attackedNormal = false;
-            }
-        }
-    }
-
-    // Attack with weapon
-    public void AttackingWithWeapon()
-    {
-        if (hasWeapon == true)
-        {
-            Debug.Log("Has weapon");
-            
-            if (Input.GetMouseButtonDown(0))
-            {
-                anim.SetTrigger("AttackingWeapon");
-                Debug.Log("ATTACK WITH WEAPON");
-
-                attackedWithWeapon = true;
-            }
-            if (Input.GetMouseButtonUp(0))
-            {
-                attackedWithWeapon = false;
+                attacked = false;
             }
         }
     }
@@ -309,7 +291,7 @@ public class PlayerController : MonoBehaviour
     // Swing attack, charged and only with weapon
     public void SwingAttackWithWeapon()
     {
-        if (hasWeapon == true)
+        if (hasWeapon)
         {
             if (Input.GetMouseButton(1))
             {
@@ -343,16 +325,6 @@ public class PlayerController : MonoBehaviour
         hurtBox.SetActive(false);
     }
 
-    // WEAPON attack hurtbox
-    public void EnableWeaponEnemyHurtBox()
-    {
-        weaponHurtBox.SetActive(true);
-    }
-    public void DisableWeaponEnemyHurtBox()
-    {
-        weaponHurtBox.SetActive(false);
-    } 
-    
     // CHARGED attack hurtbox
     public void EnableChargedEnemyHurtBox()
     {

@@ -6,6 +6,9 @@ public class BossController : MonoBehaviour
 {
     public static BossController instance;
 
+    private GameManager gm;
+    private AudioManager am;
+
     public Animator anim;
 
     public GameObject victoryZone;
@@ -23,13 +26,13 @@ public class BossController : MonoBehaviour
 
     private void OnEnable()
     {
-        AudioManager.instance.PlayMusic(bossMusic);
+        am.PlayMusic(bossMusic);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.instance.isRespawning)
+        if (gm.isRespawning)
         {
             currentPhase = BossPhase.intro;
 
@@ -40,20 +43,20 @@ public class BossController : MonoBehaviour
             anim.SetBool("Phase32", false);
             anim.SetBool("Phase33", false);
 
-            AudioManager.instance.PlayMusic(AudioManager.instance.levelMusicToPlay);
+            am.PlayMusic(am.levelMusicToPlay);
 
             gameObject.SetActive(false);
 
             BossActivator.instance.gameObject.SetActive(true);
             BossActivator.instance.entrance.SetActive(true);
 
-            GameManager.instance.isRespawning = false;
+            gm.isRespawning = false;
         }
     }
 
     public void DamageBoss()
     {
-        AudioManager.instance.PlaySFX(bossHit);
+        am.PlaySFX(bossHit);
 
         currentPhase++;
 
@@ -102,9 +105,9 @@ public class BossController : MonoBehaviour
 
     IEnumerator EndBoss()
     {
-        AudioManager.instance.PlaySFX(bossDeath);
-        AudioManager.instance.PlaySFX(bossDeathShout);
-        AudioManager.instance.PlayMusic(AudioManager.instance.levelMusicToPlay);
+        am.PlaySFX(bossDeath);
+        am.PlaySFX(bossDeathShout);
+        am.PlayMusic(am.levelMusicToPlay);
         yield return new WaitForSeconds(waitToShowExit);
         victoryZone.SetActive(true);
     }

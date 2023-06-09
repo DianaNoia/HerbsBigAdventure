@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class LevelExit : MonoBehaviour
 {
-    PlayerController pc;
+    private PlayerController pc;
+    private GameManager gm;
+
     public Animator anim;
 
     public bool givesWeapon;
@@ -14,7 +16,7 @@ public class LevelExit : MonoBehaviour
         if (other.tag == "Player")
         {
             anim.SetTrigger("Hit");
-            StartCoroutine(GameManager.instance.LevelEndCo());
+            StartCoroutine(gm.LevelEndCo());
         }
 
         if (givesWeapon == true)

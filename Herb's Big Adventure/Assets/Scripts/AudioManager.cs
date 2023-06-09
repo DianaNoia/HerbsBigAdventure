@@ -5,7 +5,8 @@ using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour
 {
-    public static AudioManager instance;
+    private AudioManager am;
+    private UIManager uim;
 
     public AudioSource[] music;
     public AudioSource[] sfx;
@@ -18,7 +19,7 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
+        am = this;
     }
 
     // Start is called before the first frame update
@@ -54,11 +55,11 @@ public class AudioManager : MonoBehaviour
 
     public void SetMusicLevel()
     {
-        musicMixer.audioMixer.SetFloat("MusicVol", UIManager.instance.musicVolSlider.value);
+        musicMixer.audioMixer.SetFloat("MusicVol", uim.musicVolSlider.value);
     }
 
     public void SetSFXLevel()
     {
-        sfxMixer.audioMixer.SetFloat("SFXVol", UIManager.instance.sfxVolSlider.value);
+        sfxMixer.audioMixer.SetFloat("SFXVol", uim.sfxVolSlider.value);
     }
 }

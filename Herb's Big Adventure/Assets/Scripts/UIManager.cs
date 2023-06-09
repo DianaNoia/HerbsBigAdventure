@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
-    public static UIManager instance;
+    private GameManager gm;
+    private UIManager uim;
 
     public Image blackScreen,
                     healthImage;
@@ -34,7 +35,7 @@ public class UIManager : MonoBehaviour
 
     public void Awake()
     {
-        instance = this;
+        uim = this;
     }
 
     // Update is called once per frame
@@ -69,7 +70,7 @@ public class UIManager : MonoBehaviour
 
     public void Resume() 
     {
-        GameManager.instance.PauseUnpause();
+        gm.PauseUnpause();
     }
 
     public void OpenOptions()
@@ -161,11 +162,11 @@ public class UIManager : MonoBehaviour
 
     public void SetMusicLevel()
     {
-        AudioManager.instance.SetMusicLevel();
+        uim.SetMusicLevel();
     }
 
     public void SetSFXLevel()
     {
-        AudioManager.instance.SetSFXLevel();
+        uim.SetSFXLevel();
     }
 }

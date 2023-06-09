@@ -67,7 +67,6 @@
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
     <Compile Include="Assets\DownloadedAssets\Standard Assets\Cameras\Scripts\ProtectCameraFromWallClip.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\LevelReset.cs" />
-    <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
     <Compile Include="Assets\DownloadedAssets\Standard Assets\Cameras\Scripts\HandHeldCam.cs" />
     <Compile Include="Assets\Scripts\NormalBoltPickup.cs" />
     <Compile Include="Assets\DownloadedAssets\Standard Assets\Cameras\Scripts\FreeLookCam.cs" />
@@ -91,7 +90,6 @@
     <Compile Include="Assets\DownloadedAssets\Standard Assets\Characters\FirstPersonCharacter\Scripts\MouseLook.cs" />
     <Compile Include="Assets\DownloadedAssets\Standard Assets\ParticleSystems\Scripts\ParticleSystemMultiplier.cs" />
     <Compile Include="Assets\Scripts\LevelSelect\LSUIManager.cs" />
-    <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
     <Compile Include="Assets\Scripts\Player\HurtPlayer.cs" />
     <Compile Include="Assets\Scripts\LevelSelect\LSResetPosition.cs" />
     <Compile Include="Assets\DownloadedAssets\Standard Assets\Characters\FirstPersonCharacter\Scripts\RigidbodyFirstPersonController.cs" />
@@ -115,7 +113,6 @@
     <Compile Include="Assets\Scripts\Player\ObstaclePush.cs" />
     <Compile Include="Assets\DownloadedAssets\Standard Assets\Cameras\Scripts\AbstractTargetFollower.cs" />
     <Compile Include="Assets\DownloadedAssets\Standard Assets\Utility\SmoothFollow.cs" />
-    <Compile Include="Assets\Scripts\Enemies\HurtEnemy.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Player\HealthManager.cs" />
     <Compile Include="Assets\DownloadedAssets\Standard Assets\Utility\WaypointCircuit.cs" />
@@ -124,7 +121,6 @@
     <Compile Include="Assets\DownloadedAssets\Standard Assets\Characters\RollerBall\Scripts\Ball.cs" />
     <Compile Include="Assets\Scripts\Enemies\BossController.cs" />
     <Compile Include="Assets\DownloadedAssets\Standard Assets\Characters\ThirdPersonCharacter\Scripts\ThirdPersonUserControl.cs" />
-    <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\GoldenBoltPickup.cs" />
     <Compile Include="Assets\DownloadedAssets\Standard Assets\Utility\WaypointProgressTracker.cs" />
     <Compile Include="Assets\DownloadedAssets\Standard Assets\Utility\DragRigidbody.cs" />
@@ -177,7 +173,6 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\DownloadedAssets\Standard Assets\Effects\ToonShading\Shaders\ToonLitOutline.shader" />
-    <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\DownloadedAssets\LowPolyWater_Pack\Textures\Shaders\WaterShaded.shader" />
     <None Include="Assets\DownloadedAssets\Standard Assets\Cameras\CameraGuidelines.txt" />

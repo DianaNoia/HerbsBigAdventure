@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class HealthManager : MonoBehaviour
 {
-    public static HealthManager instance;
+    private HealthManager hm;
+    private GameManager gm;
+    private UIManager uim;
+    private AudioManager am;
+    private PlayerController pc;
 
     [SerializeField]
     private int currentHealth, maxHealth;
@@ -23,12 +27,16 @@ public class HealthManager : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
+        hm = this;
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        hm = FindObjectOfType<HealthManager>();
+
+        uim = FindObjectOfType<UIManager>();
+
         ResetHealth();
         invicibilityCheat = false;
     }
@@ -40,20 +48,20 @@ public class HealthManager : MonoBehaviour
         {
             invincibleCounter -= Time.deltaTime;
 
-            for (int i = 0; i < PlayerController.instance.playerPieces.Length; i++)
+            for (int i = 0; i < pc.playerPieces.Length; i++)
             {
                 if(Mathf.Floor(invincibleCounter * 5f) % 2 == 0)
                 {
-                    PlayerController.instance.playerPieces[i].SetActive(true);
+                    pc.playerPieces[i].SetActive(true);
                 }
                 else
                 {
-                    PlayerController.instance.playerPieces[i].SetActive(false);
+                    pc.playerPieces[i].SetActive(false);
                 }
 
                 if(invincibleCounter <= 0)
                 {
-                    PlayerController.instance.playerPieces[i].SetActive(true);
+                    pc.playerPieces[i].SetActive(true);
                 }
             }
         }
@@ -75,17 +83,17 @@ public class HealthManager : MonoBehaviour
             if (currentHealth <= 0)
             {
                 currentHealth = 0;
-                GameManager.instance.Respawn();
+                gm.Respawn();
             }
             else
             {
-                PlayerController.instance.KnockBack();
+                pc.KnockBack();
                 invincibleCounter = invincibleLength;
             }
 
             UpdateUI();
 
-            AudioManager.instance.PlaySFX(soundToPlay);
+            am.PlaySFX(soundToPlay);
         }
         else if (invicibilityCheat == true)
         {
@@ -96,7 +104,7 @@ public class HealthManager : MonoBehaviour
     public void ResetHealth()
     {
         currentHealth = maxHealth;
-        UIManager.instance.healthImage.enabled = true;
+        uim.healthImage.enabled = true;
 
         UpdateUI();
     }
@@ -114,24 +122,24 @@ public class HealthManager : MonoBehaviour
 
     public void UpdateUI()
     {
-        UIManager.instance.healthText.text = currentHealth.ToString();
+        uim.healthText.text = currentHealth.ToString();
 
         switch (currentHealth)
         {
             case 4:
-                UIManager.instance.healthImage.sprite = healthBarImgs[4];
+                uim.healthImage.sprite = healthBarImgs[4];
                 break;
             case 3:
-                UIManager.instance.healthImage.sprite = healthBarImgs[3];
+                uim.healthImage.sprite = healthBarImgs[3];
                 break;
             case 2:
-                UIManager.instance.healthImage.sprite = healthBarImgs[2];
+                uim.healthImage.sprite = healthBarImgs[2];
                 break;
             case 1:
-                UIManager.instance.healthImage.sprite = healthBarImgs[1];
+                uim.healthImage.sprite = healthBarImgs[1];
                 break;
             case 0:
-                UIManager.instance.healthImage.sprite = healthBarImgs[0];
+                uim.healthImage.sprite = healthBarImgs[0];
                 break;
         }
     }
@@ -141,6 +149,6 @@ public class HealthManager : MonoBehaviour
         currentHealth = 0;
         UpdateUI();
 
-        AudioManager.instance.PlaySFX(soundToPlay);
+        am.PlaySFX(soundToPlay);
     }
 }

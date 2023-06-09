@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Checkpoints : MonoBehaviour
 {
+    private GameManager gm;
+    private AudioManager am;
 
     public GameObject cpOn, cpOff;
 
@@ -15,7 +17,7 @@ public class Checkpoints : MonoBehaviour
     {
         if (other.tag =="Player")
         {
-            GameManager.instance.SetSpawnPoint(transform.position);
+            gm.SetSpawnPoint(transform.position);
 
             Checkpoints[] allCP = FindObjectsOfType<Checkpoints>();
 
@@ -30,7 +32,7 @@ public class Checkpoints : MonoBehaviour
 
             if (!hasPlayed)
             {
-                AudioManager.instance.PlaySFX(soundToPlay);
+                am.PlaySFX(soundToPlay);
                 hasPlayed = true;
             }
         }

@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class HealthPickup : MonoBehaviour
 {
+    private HealthManager hm;
+    private AudioManager am;
+
     public int healAmount;
     public bool isFullHeal;
 
@@ -21,17 +24,17 @@ public class HealthPickup : MonoBehaviour
 
             if (isFullHeal)
             {
-                HealthManager.instance.ResetHealth();
+                hm.ResetHealth();
             }
             else
             {
-                HealthManager.instance.AddHealth(healAmount);
+                hm.AddHealth(healAmount);
             }            
             
             // health effect
             Instantiate(healEffect, transform.position, transform.rotation);
 
-            AudioManager.instance.PlaySFX(soundToPlay);
+            am.PlaySFX(soundToPlay);
         }
     }
 }
