@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class GoldenBoltPickup : MonoBehaviour
@@ -7,14 +8,17 @@ public class GoldenBoltPickup : MonoBehaviour
 
     public int value;
 
-    //public GameObject pickupEffect;
+    public GameObject pickupEffect;
 
     public int soundToPlay;
+
+    private Animator anim;
 
     private void Start()
     {
         am = FindObjectOfType<AudioManager>();
         gm = FindObjectOfType<GameManager>();
+        anim = GetComponent<Animator>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -23,11 +27,18 @@ public class GoldenBoltPickup : MonoBehaviour
         {
             gm.AddGoldenBolts(value);
 
-            Destroy(gameObject);
+            anim.SetTrigger("PickedUp");
 
-            //Instantiate(pickupEffect, transform.position, transform.rotation);
+            Instantiate(pickupEffect, transform.position, transform.rotation);
 
             am.PlaySFX(soundToPlay);
+
+            StartCoroutine(WaitToDestroy());
         }
+    }
+    private IEnumerator WaitToDestroy()
+    {
+        yield return new WaitForSeconds(1f);
+        Destroy(gameObject);
     }
 }

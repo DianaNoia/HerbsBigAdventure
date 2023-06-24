@@ -4,21 +4,26 @@ using UnityEngine;
 
 public class BossActivator : MonoBehaviour
 {
-    public static BossActivator instance;
+    [SerializeField]
+    private AudioManager am;
+    private BossActivator ba;
 
     public GameObject entrance, theBoss;
 
     private void Awake()
     {
-        instance = this;
+        ba = this;
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
+            // Sets the entrance to the boss to inactive and the boss to active
             entrance.SetActive(false);
             theBoss.SetActive(true);
+
+            // Sets the boss activator collider to inactive 
             gameObject.SetActive(false);
         }
     }

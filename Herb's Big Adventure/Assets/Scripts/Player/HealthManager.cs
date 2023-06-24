@@ -16,6 +16,10 @@ public class HealthManager : MonoBehaviour
     [SerializeField]
     private bool invicibilityCheat;
 
+    // Variables for the delay in the toggle of cheat
+    private bool canToggle = true;
+    private float toggleDelay = 1f;
+
     public float invincibleLength = 1f;
     private float invincibleCounter;
 
@@ -69,11 +73,30 @@ public class HealthManager : MonoBehaviour
         }
 
         // Make Player invicible
-        if (Input.GetKey(KeyCode.Alpha6))
+        if (Input.GetKey(KeyCode.Alpha6) && canToggle)
         {
             Debug.Log("Invicible");
-            invicibilityCheat = true;
+
+            invicibilityCheat = !invicibilityCheat;
+
+            if (invicibilityCheat)
+            {
+                uim.cheatInvincible.SetActive(true);
+            }
+            else
+            {
+                uim.cheatInvincible.SetActive(false);
+            }
+
+            StartCoroutine(ToggleDelay());
         }
+    }
+
+    private IEnumerator ToggleDelay()
+    {
+        canToggle = false;
+        yield return new WaitForSeconds(toggleDelay);
+        canToggle = true;
     }
 
     public void Hurt()
@@ -81,6 +104,32 @@ public class HealthManager : MonoBehaviour
         if (invincibleCounter <= 0 && invicibilityCheat == false)
         {
             currentHealth--;
+
+            if (currentHealth <= 0)
+            {
+                currentHealth = 0;
+                gm.Respawn();
+            }
+            else
+            {
+                pc.KnockBack();
+                invincibleCounter = invincibleLength;
+            }
+
+            UpdateUI();
+
+            am.PlaySFX(soundToPlay);
+        }
+        else if (invicibilityCheat == true)
+        {
+            currentHealth = maxHealth;
+        }
+    }
+    public void HurtExplosion()
+    {
+        if (invincibleCounter <= 0 && invicibilityCheat == false)
+        {
+            currentHealth -= 2;
 
             if (currentHealth <= 0)
             {

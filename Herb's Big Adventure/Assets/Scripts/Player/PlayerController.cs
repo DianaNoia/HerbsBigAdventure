@@ -4,17 +4,24 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public static PlayerController instance;
+    public static PlayerController instance; 
+    
+    private AudioManager am;
+
+    private LevelExit levelExit;
+
+    public int jumpAudio;
+
 
     public float moveSpeed;
     public float jumpForce;
     public float gravityScale = 5f;
     public float bounceForce = 8f;
 
-    public float crouchSpeed;
-    [SerializeField] private bool canStand;
-    [SerializeField] private bool crouch = false;
-    [SerializeField] private GameObject headPosition;
+    //public float crouchSpeed;
+    //[SerializeField] private bool canStand;
+    //[SerializeField] private bool crouch = false;
+    //[SerializeField] private GameObject headPosition;
 
     public float numberOfJumps;
     public bool canDoubleJump = true;
@@ -43,14 +50,13 @@ public class PlayerController : MonoBehaviour
     private float holdDownTime = 0;
 
     // Bools to check which attacked occured
-    public bool attacked, 
-                attackedCharged;
+    public bool attacked; //attackedCharged;
 
     // Colliders for each of the attacks
-    public GameObject hurtBox, chargedHurtBox;
+    public GameObject hurtBox; //chargedHurtBox;
 
     // Bool to check if player has picked up weapon
-    public bool hasWeapon = false;
+    public bool hasWeapon;
 
     // Weapon GameObject
     public GameObject weapon;
@@ -63,18 +69,21 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        am = FindObjectOfType<AudioManager>();
+
         theCam = Camera.main;
 
         attacked = false;
-        attackedCharged = false;
 
         hurtBox.SetActive(false);
-        chargedHurtBox.SetActive(false);
 
         anim = GetComponent<Animator>();
 
-        AddEvent(5, 0f, "EnableEnemyHurtBox", 0);
-        AddEvent(5, .4f, "DisableEnemyHurtBox", 0);
+        //hasWeapon = false;
+
+        //AddEvent(5, 0f, "EnableEnemyHurtBox", 0);
+        //AddEvent(5, .4f, "DisableEnemyHurtBox", 0);
+
     }
 
     // Update is called once per frame
@@ -101,14 +110,10 @@ public class PlayerController : MonoBehaviour
                     numberOfJumps = 1;
 
                     Debug.Log("JUMP");
+
+                    am.PlaySFX(jumpAudio);
                 }
             }
-            // Código para melhorar o salto dado pelo prof Diogo, para futura implementação 
-
-            //else if ((Input.GetButton("Jump")) && (numberOfJumps == 1))
-            //{
-            //    moveDirection.y += Physics.gravity.y * 0.2f * Time.deltaTime * gravityScale;
-            //}
             else
             {
                 moveDirection.y += Physics.gravity.y * Time.deltaTime * gravityScale;
@@ -117,6 +122,7 @@ public class PlayerController : MonoBehaviour
                     moveDirection.y = jumpForce;
                     canDoubleJump = false;
                     Debug.Log("DOUBLE JUMP");
+                    am.PlaySFX(jumpAudio);
                 }
             }
 
@@ -162,22 +168,23 @@ public class PlayerController : MonoBehaviour
             charController.Move(moveDirection);
         }
 
-        // Call the crouch and attack when they are activated
-        Crouching();
         Attacking();
-        SwingAttackWithWeapon();
 
         anim.SetFloat("Speed", Mathf.Abs(moveDirection.x) + Mathf.Abs(moveDirection.z));
         anim.SetBool("Grounded", charController.isGrounded);
 
         // Checks if player has weapon active or not
-        if (hasWeapon == true)
+        if (hasWeapon)
         {
+            //weaponManager.weapon.SetActive(true);
+
             weapon.SetActive(true);
         }
         else
         {
-            weapon.SetActive(false);
+            //weaponManager.weapon.SetActive(false);
+
+            weapon.SetActive(true);
         }
 
         // Activates weapon just in case end of level doesnt work
@@ -197,75 +204,6 @@ public class PlayerController : MonoBehaviour
         charController.Move(moveDirection * Time.deltaTime);
     }
 
-    //// Bounce of the player on enemies head
-    //public void Bounce()
-    //{
-    //    moveDirection.y = bounceForce;
-    //    charController.Move(moveDirection * Time.deltaTime);
-    //}
-
-    // Crouching
-    public void Crouching()
-    {
-        // Raycast when the player is under something and he can't stand up,
-        // used for debugging 
-        if (Physics.Raycast(headPosition.transform.position, Vector3.up, 0.5f))
-        {
-            canStand = false;
-            Debug.DrawRay(headPosition.transform.position, Vector3.up, 
-                Color.green);
-        }
-        else
-        {
-            canStand = true;
-        }
-
-        // When key pressed, checks if can crouch or not
-        if (Input.GetKey(KeyCode.C))
-        {
-            Debug.Log("Crouching");
-            if (crouch == false && canStand == true)
-            {
-
-                Debug.Log(" can Crouch");
-                crouch = true; // It also means we are crouching
-                anim.SetBool("Crouching", true);
-
-                jumpForce = 0f;
-                moveSpeed = 2.5f;
-
-                charController.height = .5f;
-                charController.center = new Vector3(0f, .3f, 0f);
-            }
-        }
-        else
-        {
-            if (crouch == true && canStand == true)
-            {
-                Debug.Log(" cant Crouch");
-                crouch = false; // It also means we are standing
-                anim.SetBool("Crouching", false);
-
-                jumpForce = 15f;
-                moveSpeed = 5f;
-
-                charController.height = 1f;
-                charController.center = new Vector3(0f, .58f, 0f);
-            }
-            else if (crouch == true && canStand == false)
-            {
-                crouch = false; // It also means we are crouching
-                anim.SetBool("Crouching", true);
-
-                jumpForce = 0f;
-                moveSpeed = 2.5f;
-
-                charController.height = .5f;
-                charController.center = new Vector3(0f, .3f, 0f);
-            }
-        }
-    }
-
     // Attack basick
     public void Attacking()
     {
@@ -273,45 +211,19 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
-                Debug.Log("Has weapon");
-
                 anim.SetTrigger("Attacking");
-                Debug.Log("ATTACK");
-
+                
                 attacked = true;
+                hurtBox.SetActive(true);
+
+                Debug.Log("ATTACK");
             }
-            if (Input.GetMouseButtonUp(0))
+            else if (Input.GetMouseButtonUp(0))
             {
                 attacked = false;
+                hurtBox.SetActive(false);
             }
         }
-    }
-
-    // Swing attack, charged and only with weapon
-    public void SwingAttackWithWeapon()
-    {
-        if (hasWeapon)
-        {
-            if (Input.GetMouseButton(1))
-            {
-                holdDownTime += Time.deltaTime;
-            }
-
-            if ((Input.GetMouseButtonUp(1)) && (holdDownTime > 2))
-            {
-                anim.SetTrigger("SwingAttack");
-                Debug.Log("SWING ATTACK");
-
-                attackedCharged = true;
-            }
-
-            if ((Input.GetMouseButtonUp(1)) && (holdDownTime < 2))
-            {
-                holdDownTime = 0;
-
-                attackedCharged = false;
-            }
-        }        
     }
 
     // NORMAL attack hurtbox
@@ -322,16 +234,6 @@ public class PlayerController : MonoBehaviour
     public void DisableEnemyHurtBox()
     {
         hurtBox.SetActive(false);
-    }
-
-    // CHARGED attack hurtbox
-    public void EnableChargedEnemyHurtBox()
-    {
-        chargedHurtBox.SetActive(true);
-    }
-    public void DisableChargedEnemyHurtBox()
-    {
-        chargedHurtBox.SetActive(false);
     }
 
     // Animation events 

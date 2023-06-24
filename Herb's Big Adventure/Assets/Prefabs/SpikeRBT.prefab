@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1351568039719348547}
   - component: {fileID: 1351568039719348546}
   - component: {fileID: 1351568039719348544}
+  - component: {fileID: 1483481773}
   m_Layer: 0
   m_Name: SpikeRBT
   m_TagString: Enemy
@@ -64,7 +65,6 @@ MonoBehaviour:
   patrolPoints:
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
   currentPatrolPoint: 0
   agent: {fileID: 1351568039719348544}
   anim: {fileID: 8377131556193762034}
@@ -85,9 +85,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a792cecd13d8e1e4daab72eeec991ecc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 6
-  isImmortal: 1
+  enemyEffects: {fileID: 1483481773}
+  maxHealth: 500
+  currentHealth: 0
+  minHealth: 0
   deathSound: 6
+  soundToPlay: 12
+  anim: {fileID: 0}
   deathEffect: {fileID: 9075779683149004032, guid: df47e7cbc55d30b4992f24e9769c699f, type: 3}
   itemToDrop: {fileID: 8714933507198256491, guid: a725845a4a2bb0941b0f0b746065ce1e, type: 3}
 --- !u!195 &1351568039719348544
@@ -112,6 +116,22 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1483481773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1351568039719348550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bf272910e8a22849a7eb0caa5f949e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyHealthManager: {fileID: 1351568039719348546}
+  effectShineFull: {fileID: 0}
+  effectSmokeWeak: {fileID: 0}
+  effectSmokeFull: {fileID: 0}
 --- !u!1 &1351568041143438568
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,8 +176,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.9928743, z: 0.52120686}
-  m_Center: {x: 0, y: 0.4875001, z: 0.46767998}
+  m_Size: {x: 1.3189316, y: 1.0612162, z: 1.3907852}
+  m_Center: {x: -0.018222809, y: 0.5216711, z: 0.14679337}
 --- !u!114 &1351568041143438571
 MonoBehaviour:
   m_ObjectHideFlags: 0

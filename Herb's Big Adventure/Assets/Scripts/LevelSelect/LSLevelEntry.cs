@@ -3,14 +3,16 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+// Class for the level loading
 public class LSLevelEntry : MonoBehaviour
 {
     private UIManager uim;
 
     [SerializeField]
     private LSUIManager lsUIManager;
+
     [SerializeField]
-    private LevelCompletion levelCompletion;
+    private LevelCompletion lc;
 
     [SerializeField]
     public string levelName, 
@@ -19,9 +21,8 @@ public class LSLevelEntry : MonoBehaviour
                     valueOfNormalBoltsEachLevel;
 
     public bool canLoadLevel,
-                levelUnlocked;
-
-    public bool levelLoading;
+                levelUnlocked,
+                levelLoading;
 
     [SerializeField] 
     private GameObject mapPointActive, 
@@ -29,13 +30,20 @@ public class LSLevelEntry : MonoBehaviour
                         loadingScreen, 
                         loadingText,
                         loadedText, 
-                        continueIntoLevelText, textIfLevelUnlocked, textIfLevelLocked;
+                        textIfLevelUnlocked, 
+                        textIfLevelLocked;
                                         
     // Slider
-    [SerializeField] private  Slider slider;
+    [SerializeField] 
+    private  Slider slider;
+
+    [SerializeField]
+    public float totalNBInLevel,
+                    totalGBInLevel;
 
     // Timer to make loading wait
     private float loadingTimeForLoader = .2f;
+    private float oneSecondBeforeSceneLoads = .3f;
     private float loadingTime = 2f;
     private float timer;
 
@@ -45,6 +53,7 @@ public class LSLevelEntry : MonoBehaviour
     void Start()
     {
         uim = FindObjectOfType<UIManager>();
+
         // Set loading bar timer to 0;
         timer = 0f;
 
@@ -53,20 +62,13 @@ public class LSLevelEntry : MonoBehaviour
             mapPointActive.SetActive(true);
             mapPointInactive.SetActive(false);
             levelUnlocked = true;
-            //textIfLevelUnlocked.SetActive(true);
-            //textIfLevelLocked.SetActive(false);
         }
         else
         {
             mapPointActive.SetActive(false);
             mapPointInactive.SetActive(true);
             levelUnlocked = false;
-            //textIfLevelUnlocked.SetActive(false);
-            //textIfLevelLocked.SetActive(true);
-
         }
-
-        
 
         if (PlayerPrefs.GetString("CurrentLevel") == levelName)
         {
@@ -122,13 +124,8 @@ public class LSLevelEntry : MonoBehaviour
                 {
                     loadingText.SetActive(false);
                     loadedText.SetActive(true);
-                    continueIntoLevelText.SetActive(true);
-
-                    //if (Input.GetKeyDown(KeyCode.Space))
-                    //{
-                    //    // Loading is almost complete, allow the target scene to activate
-                    //    levelScene.allowSceneActivation = true;
-                    //}
+                    yield return new WaitForSeconds(oneSecondBeforeSceneLoads);
+                    levelScene.allowSceneActivation = true;
                 }
             }
 
@@ -138,16 +135,16 @@ public class LSLevelEntry : MonoBehaviour
         PlayerPrefs.SetString("CurrentLevel", levelName);
     }
 
+    // Makes loading bar move
     private void UpdateProgressBar()
     {
         float progress = timer / loadingTime;
         slider.value = progress;
     }
 
+    // When player enters level entry collider
     public void OnTriggerEnter(Collider other)
     {
-        Debug.Log("OnTriggerEnter called");
-
         int goldenBolts = PlayerPrefs.GetInt(levelName + "_goldenBolts");
 
         if (other.tag == "Player")
@@ -168,8 +165,6 @@ public class LSLevelEntry : MonoBehaviour
 
             if (PlayerPrefs.HasKey(levelName + "_goldenBolts"))
             {
-                Debug.Log("Quantity of golden bolts: " + PlayerPrefs.GetInt(levelName + "_goldenBolts").ToString());
-
                 // When there is 1 gb unlocked in a level
                 if (goldenBolts  == 1)
                 {
@@ -214,29 +209,24 @@ public class LSLevelEntry : MonoBehaviour
             }
         }
 
-        levelCompletion.CalculatePercentComplete();
-
+        lc.CalculatePercentComplete();
+        
         if (levelUnlocked)
         {
-            Debug.Log("Level is unlocked: " + levelName);
-
             textIfLevelUnlocked.SetActive(true);
             textIfLevelLocked.SetActive(false);
         }
 
         if (!levelUnlocked)
         {
-            Debug.Log("Level is locked: " + levelName);
-
             textIfLevelUnlocked.SetActive(false);
             textIfLevelLocked.SetActive(true);
         }
     }
 
+    // When player exits level entry collider
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log("OnTriggerExit called");
-
         if (other.tag == "Player")
         {
             canLoadLevel = false;
@@ -252,23 +242,4 @@ public class LSLevelEntry : MonoBehaviour
             lsUIManager.placeHolder3.SetActive(true);
         }
     }
-
-    //public IEnumerator LevelLoadCo()
-    //{
-    //    Debug.Log("LOADING");
-    //    PlayerController.instance.stopMove = true;
-    //    UIManager.instance.fadeToBlack = true;
-
-    //    yield return new WaitForSeconds(2f);
-
-    //    SceneManager.LoadScene(levelName);
-    //    PlayerPrefs.SetString("CurrentLevel", levelName);
-    //}
-
-
-    //public void LoadScene(int levelIndex)
-    //{
-    //    StartCoroutine(LoadSceneAsynchronously());
-    //}
-
 }

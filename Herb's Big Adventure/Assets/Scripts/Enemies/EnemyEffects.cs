@@ -10,7 +10,7 @@ public class EnemyEffects : MonoBehaviour
 
     // The effects on unity
     [SerializeField]
-    private GameObject effectShineFull, effectShineDepleted, effectSmoke;
+    private GameObject effectShineFull, effectSmokeWeak, effectSmokeFull;
 
     // Swaps the effects
     public void EffectSwapper()
@@ -19,29 +19,29 @@ public class EnemyEffects : MonoBehaviour
         if (enemyHealthManager.currentHealth == enemyHealthManager.maxHealth)
         {
             SetActiveEffect(effectShineFull, true);
-            SetActiveEffect(effectShineDepleted, false);
-            SetActiveEffect(effectSmoke, false);
+            SetActiveEffect(effectSmokeWeak, false);
+            SetActiveEffect(effectSmokeFull, false);
         }
-        // Health full - 1
-        else if (enemyHealthManager.currentHealth == (enemyHealthManager.maxHealth - 1))
+        // Health 2 below death
+        else if (enemyHealthManager.currentHealth == (enemyHealthManager.minHealth + 2))
         {
             SetActiveEffect(effectShineFull, false);
-            SetActiveEffect(effectShineDepleted, true);
-            SetActiveEffect(effectSmoke, false);
+            SetActiveEffect(effectSmokeWeak, true);
+            SetActiveEffect(effectSmokeFull, false);
         }
         // Health 1 below death almost dead
         else if (enemyHealthManager.currentHealth == (enemyHealthManager.minHealth +1))
         {
             SetActiveEffect(effectShineFull, false);
-            SetActiveEffect(effectShineDepleted, false);
-            SetActiveEffect(effectSmoke, true);
+            SetActiveEffect(effectSmokeWeak, false);
+            SetActiveEffect(effectSmokeFull, true);
         }
         // Health other
         else
         {
             effectShineFull.SetActive(false);
-            effectShineDepleted.SetActive(false);
-            effectSmoke.SetActive(false);
+            effectSmokeWeak.SetActive(false);
+            effectSmokeFull.SetActive(false);
         }
     }
     

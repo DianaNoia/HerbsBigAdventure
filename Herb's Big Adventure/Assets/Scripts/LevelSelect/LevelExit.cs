@@ -6,29 +6,36 @@ public class LevelExit : MonoBehaviour
 {
     private PlayerController pc;
     private GameManager gm;
+    private UIManager uim;
 
     public Animator anim;
 
     public bool givesWeapon;
 
+    public bool hasGivenWeapon;
 
     private void Start()
     {
         pc = FindObjectOfType<PlayerController>();
         gm = FindObjectOfType<GameManager>();
+        uim = FindObjectOfType<UIManager>();
 
+        hasGivenWeapon = false;
     }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
-            anim.SetTrigger("Hit");
+            StartCoroutine(EndDelay());
+
             StartCoroutine(gm.LevelEndCo());
         }
-
-        if (givesWeapon == true)
-        {
-            pc.hasWeapon = true;
-        }
+    }
+    
+    private IEnumerator EndDelay()
+    {
+        uim.endScreen.SetActive(true);
+        yield return new WaitForSeconds(6f);
     }
 }

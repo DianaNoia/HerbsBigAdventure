@@ -12,8 +12,13 @@ public class HealthPickup : MonoBehaviour
 
     public GameObject healEffect;
 
-
     public int soundToPlay;
+    private void Start()
+    {
+        hm = FindObjectOfType<HealthManager>();
+        am = FindObjectOfType<AudioManager>(); ;
+
+    }
 
     private void OnTriggerEnter(Collider other)
     {

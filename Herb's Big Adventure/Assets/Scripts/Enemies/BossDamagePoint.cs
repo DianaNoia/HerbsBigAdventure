@@ -2,25 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Class that controls boss damage point
 public class BossDamagePoint : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private BossController bc;
+
+    private void Start()
     {
-
+        bc = FindObjectOfType<BossController>();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "HurtBox")
         {
-            BossController.instance.DamageBoss();
+            bc.DamageBoss();
         }
     }
 }

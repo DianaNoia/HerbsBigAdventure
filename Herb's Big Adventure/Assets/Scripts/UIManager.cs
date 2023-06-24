@@ -6,8 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
-    private GameManager gm;
     private UIManager uim;
+
+    [SerializeField]
+    private GameManager gameManager;
 
     public Image blackScreen,
                     healthImage;
@@ -17,23 +19,28 @@ public class UIManager : MonoBehaviour
 
     public Text healthText,
                 boltsText,
-                goldenBoltsText;
+                level1PercentageText,
+                level2PercentageText,
+                level3PercentageText,
+                level4PercentageText;
 
-    public GameObject goldenBoltImage, 
-                        goldenBoltImage2, 
-                        goldenBoltImage3, 
-                        goldenBoltImageTransparent, 
-                        goldenBoltImageTransparent2, 
-                        goldenBoltImageTransparent3;
-
-    public GameObject pauseScreenInGame,
+    public GameObject goldenBoltImage,
+                        goldenBoltImage2,
+                        goldenBoltImage3,
+                        goldenBoltImageTransparent,
+                        goldenBoltImageTransparent2,
+                        goldenBoltImageTransparent3,
+                        pauseScreenInGame,
                         pauseScreenInLevelSelect,
                         optionsScreen,
-                        controlsScreen,
                         backToLevelSelect,
                         backToMainMenu_InGame,
-                        backToMainMenu_InLS;
-
+                        backToMainMenu_InLS,
+                        levelCompletionScreen,
+                        cheatInvincible,
+                        cheatTeleport,
+                        endScreen;
+     
     public Slider musicVolSlider, 
                     sfxVolSlider;
 
@@ -47,8 +54,8 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
-        uim = FindObjectOfType<UIManager>();
-        gm = FindObjectOfType<GameManager>();
+        cheatInvincible.SetActive(false);
+        cheatTeleport.SetActive(false);
     }
 
     // Update is called once per frame
@@ -81,19 +88,36 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    // Resumes game
     public void Resume() 
     {
-        gm.PauseUnpause();
+        gameManager.PauseUnpause();
     }
 
+    // Open option panel
     public void OpenOptions()
     {
         optionsScreen.SetActive(true);
+        pauseScreenInGame.SetActive(false);
+        pauseScreenInLevelSelect.SetActive(false);
+        levelCompletionScreen.SetActive(false);
     }
 
+    // Close option panel
     public void CloseOptions() 
     {
         optionsScreen.SetActive(false);
+
+        // Checks if the we are in the level select or in game pause screen
+        if (pauseScreenInLevelSelect.activeInHierarchy)
+        {
+            pauseScreenInLevelSelect.SetActive(false);
+            levelCompletionScreen.SetActive(false);
+        }
+        if (pauseScreenInGame.activeInHierarchy)
+        {
+            pauseScreenInGame.SetActive(false);
+        }
     }
 
     // Opens panel asking if you want to go back to level select
@@ -140,6 +164,8 @@ public class UIManager : MonoBehaviour
     {
         // deactivates the pause screen
         pauseScreenInLevelSelect.SetActive(false);
+        // deactivates the level completion screen
+        levelCompletionScreen.SetActive(false);
 
         // activates the prompt
         backToMainMenu_InLS.SetActive(true);
@@ -168,18 +194,20 @@ public class UIManager : MonoBehaviour
     {
         // activates the pause screen 
         pauseScreenInLevelSelect.SetActive(true);
+        // activates the level completion screen
+        levelCompletionScreen.SetActive(true);
 
         // deactivates the prompt
         backToMainMenu_InLS.SetActive(false);
     }
 
-    public void SetMusicLevel()
-    {
-        uim.SetMusicLevel();
-    }
+    //public void SetMusicLevel()
+    //{
+    //    uim.SetMusicLevel();
+    //}
 
-    public void SetSFXLevel()
-    {
-        uim.SetSFXLevel();
-    }
+    //public void SetSFXLevel()
+    //{
+    //    uim.SetSFXLevel();
+    //}
 }

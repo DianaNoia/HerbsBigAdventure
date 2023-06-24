@@ -63,12 +63,7 @@ namespace UnityStandardAssets.Cameras
         {
             if (m_Target == null) return;
             // Move the rig towards target position.
-            Vector3 newPos = new Vector3();
-            newPos.x = Mathf.Lerp(transform.position.x, m_Target.position.x, deltaTime * m_MoveSpeed);
-            newPos.y = Mathf.Lerp(transform.position.y, m_Target.position.y, deltaTime * m_MoveSpeed * 0.3f);
-            newPos.z = Mathf.Lerp(transform.position.z, m_Target.position.z, deltaTime * m_MoveSpeed);
-            transform.position = newPos; // Vector3.Lerp(transform.position, m_Target.position, deltaTime*m_MoveSpeed);
-            //transform.position = Vector3.MoveTowards(transform.position, m_Target.position, deltaTime * m_MoveSpeed);
+            transform.position = Vector3.Lerp(transform.position, m_Target.position, deltaTime*m_MoveSpeed);
         }
 
 

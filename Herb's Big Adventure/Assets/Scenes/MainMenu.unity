@@ -205,7 +205,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &156152774
 GameObject:
@@ -1289,6 +1289,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1137475603, guid: 2eed313400b63c747a8a25c8047298d4, type: 3}
+      propertyPath: weapon
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 73934164466255419, guid: 2eed313400b63c747a8a25c8047298d4, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1340,6 +1344,10 @@ PrefabInstance:
     - target: {fileID: 73934164466255421, guid: 2eed313400b63c747a8a25c8047298d4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5955562050664704315, guid: 2eed313400b63c747a8a25c8047298d4, type: 3}
+      propertyPath: weapon
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5955562050664704315, guid: 2eed313400b63c747a8a25c8047298d4, type: 3}
       propertyPath: stopMove
@@ -2158,8 +2166,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 25}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -380, y: 143}
-  m_SizeDelta: {x: 1618, y: 637}
+  m_AnchoredPosition: {x: -513, y: 256}
+  m_SizeDelta: {x: 1422.415, y: 559.999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1317319047
 MonoBehaviour:
@@ -2362,7 +2370,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3652438953076143364, guid: 86f63f466db1e094d9c392b86bb185ec, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3652438953076143364, guid: 86f63f466db1e094d9c392b86bb185ec, type: 3}
       propertyPath: m_AnchorMax.x
@@ -3054,6 +3062,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 288979964, guid: 65341ea6337386d49a98b717fc57fa7a, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324517474879930231, guid: 65341ea6337386d49a98b717fc57fa7a, type: 3}
+      propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3324517474879930231, guid: 65341ea6337386d49a98b717fc57fa7a, type: 3}

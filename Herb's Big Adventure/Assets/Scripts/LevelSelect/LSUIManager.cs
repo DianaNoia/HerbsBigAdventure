@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// Class to control the level select 
 public class LSUIManager : MonoBehaviour
 {
     public static LSUIManager instance;
-    GameManager gm;
+    private GameManager gm;
 
     public Text lNameText;
     public GameObject lNamePanel;

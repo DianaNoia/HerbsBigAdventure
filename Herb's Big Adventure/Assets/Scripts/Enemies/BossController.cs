@@ -2,29 +2,48 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Class with all boss properties
 public class BossController : MonoBehaviour
-{
-    public static BossController instance;
-
-    private GameManager gm;
+{   
+    [SerializeField]
     private AudioManager am;
 
-    public Animator anim;
+    private BossController bc;
 
-    public GameObject victoryZone;
-    public float waitToShowExit;
+    [SerializeField]
+    private BossActivator ba;
 
+    private GameManager gm;
+
+    [SerializeField]
+    private Animator anim;
+
+    [SerializeField]
+    private GameObject victoryZone;
+
+    private float waitToShowExit = 5f;
+
+    // Boss phases
     public enum BossPhase { intro, phase1, phase2, phase21, phase31, phase32, phase33, end };
     public BossPhase currentPhase = BossPhase.intro;
+    
+    [SerializeField]
+    private int bossMusic, bossDeath, bossDeathShout, bossHit;
 
-    public int bossMusic, bossDeath, bossDeathShout, bossHit;
+    public bool canTakeDamage;
 
     private void Awake()
     {
-        instance = this;
+        bc = this;
     }
 
-    private void OnEnable()
+    private void Start()
+    {
+        gm = FindObjectOfType<GameManager>();
+    }
+
+    // Starts boss music
+    void OnEnable()
     {
         am.PlayMusic(bossMusic);
     }
@@ -32,6 +51,7 @@ public class BossController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // If the player dies and respawns
         if (gm.isRespawning)
         {
             currentPhase = BossPhase.intro;
@@ -45,10 +65,12 @@ public class BossController : MonoBehaviour
 
             am.PlayMusic(am.levelMusicToPlay);
 
+            // Resets boss to inactive
             gameObject.SetActive(false);
 
-            BossActivator.instance.gameObject.SetActive(true);
-            BossActivator.instance.entrance.SetActive(true);
+            // Resets the collider and the boss entrance to active
+            ba.gameObject.SetActive(true);
+            ba.entrance.SetActive(true);
 
             gm.isRespawning = false;
         }
@@ -74,6 +96,7 @@ public class BossController : MonoBehaviour
             case BossPhase.phase1:
                 anim.SetBool("Phase1", true);
                 anim.SetBool("Intro", false);
+                canTakeDamage = true;
                 break;
 
             case BossPhase.phase2:

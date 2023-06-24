@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     private HealthManager hm;
-    private UIManager uim;
+    public UIManager uim;
     public PlayerController pc;
     private AudioManager am;
     private GameManager gm;
@@ -34,10 +34,7 @@ public class GameManager : MonoBehaviour
 
     private string currentScene;
 
-    // [SerializeField]
-    // private bool controlsShown = false;
-
-    // Cheat to skip boss level and start close to boss
+    // Cheat variables to skip level and start close to end
     [SerializeField]
     private  GameObject player;
     [SerializeField]
@@ -59,7 +56,7 @@ public class GameManager : MonoBehaviour
 
         pc = FindObjectOfType<PlayerController>();
         hm = FindObjectOfType<HealthManager>();
-        uim = FindObjectOfType<UIManager>();
+        //uim = FindObjectOfType<UIManager>();
         am = FindObjectOfType<AudioManager>();
         gm = FindObjectOfType<GameManager>();
 
@@ -74,7 +71,7 @@ public class GameManager : MonoBehaviour
         // Pausing the game
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Debug.Log("Pausing!!");
+            Debug.Log("pressed esc");
             PauseUnpause();
         }
 
@@ -102,11 +99,25 @@ public class GameManager : MonoBehaviour
         // Place player closer to goal
         if (Input.GetKeyDown(KeyCode.Alpha5))
         {
+            StartCoroutine(TeleportCo());
+
             Debug.Log("Change players position");
+
             player.SetActive(false);
+
             playerTransform.position = destinationTransform.position;
+
             player.SetActive(true);
         }
+    }
+
+    public IEnumerator TeleportCo()
+    {
+        uim.cheatTeleport.SetActive(true);
+
+        yield return new WaitForSeconds(3f);
+
+        uim.cheatTeleport.SetActive(false);
     }
 
     public void Respawn()
@@ -194,40 +205,64 @@ public class GameManager : MonoBehaviour
     {
         if (currentScene == "LevelSelect")
         {
+            Debug.Log("paused in LS");
             if (uim.pauseScreenInLevelSelect.activeInHierarchy)
             {
+                Debug.Log("UN paused ");
+                // turns off pause screen and level completion screen
                 uim.pauseScreenInLevelSelect.SetActive(false);
+                uim.levelCompletionScreen.SetActive(false);
+
+                // sets game time to running
                 Time.timeScale = 1f;
 
+                // makes cursor invisible and locked in game
                 Cursor.visible = false;
                 Cursor.lockState = CursorLockMode.Locked;
             }
             else
             {
+                Debug.Log("paused ");
+                // turns on pause screen and level completion screen
                 uim.pauseScreenInLevelSelect.SetActive(true);
-                uim.CloseOptions();
+                uim.levelCompletionScreen.SetActive(true);
+                //uim.CloseOptions();
+
+                // stops game time
                 Time.timeScale = 0f;
 
+                // makes cursor visible and unlocks it
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.Confined;
             }
         }
         else
         {
+            Debug.Log("paused in GAME");
             if (uim.pauseScreenInGame.activeInHierarchy)
             {
+                Debug.Log("UN paused ");
+                // turns off pause screen
                 uim.pauseScreenInGame.SetActive(false);
+
+                // sets game time to running
                 Time.timeScale = 1f;
 
+                // makes cursor invisible and locked in game
                 Cursor.visible = false;
                 Cursor.lockState = CursorLockMode.Locked;
             }
             else
             {
+                Debug.Log("paused");
+                // turns on pause screen
                 uim.pauseScreenInGame.SetActive(true);
-                uim.CloseOptions();
+                //uim.CloseOptions();
+
+                // stops game time
                 Time.timeScale = 0f;
 
+                // makes cursor visible and unlocks it
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.Confined;
             }
@@ -239,9 +274,9 @@ public class GameManager : MonoBehaviour
         am.PlayMusic(levelEndMusic);
         PlayerController.instance.stopMove = true;
 
-        uim.fadeToBlack = true;
+        //uim.fadeToBlack = true;
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(4f);
         Debug.Log("level ended");
 
         PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_unlocked", 1);

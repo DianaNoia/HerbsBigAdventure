@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 845565740}
   m_Layer: 0
   m_Name: EnemyHurtbox Normal Attack
-  m_TagString: Player
+  m_TagString: HurtBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137,8 +137,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.627501, y: 0.5594276, z: 0.44488358}
-  m_Center: {x: -0.012772441, y: 0.2297138, z: -0.061392367}
+  m_Size: {x: 0.8728961, y: 0.4079849, z: 0.59694177}
+  m_Center: {x: -0.00705415, y: 0.15399258, z: -0.13742143}
 --- !u!54 &845565740
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -168,6 +168,8 @@ GameObject:
   - component: {fileID: 5955562050664704315}
   - component: {fileID: 73934166074147547}
   - component: {fileID: 1190163739}
+  - component: {fileID: 1137475603}
+  - component: {fileID: 1616610539}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -204,12 +206,12 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 1
-  m_Radius: 0.25
+  m_Radius: 0.4
   m_SlopeLimit: 45
   m_StepOffset: 0.3
-  m_SkinWidth: 0.08
+  m_SkinWidth: 0.001
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.58, z: 0}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!114 &5955562050664704315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,14 +224,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 002b32cd8fea2c64daec8399305d8e7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpAudio: 13
   moveSpeed: 5
   jumpForce: 14
   gravityScale: 5
   bounceForce: 12
-  crouchSpeed: 2
-  canStand: 0
-  crouch: 0
-  headPosition: {fileID: 556873582}
   numberOfJumps: 0
   canDoubleJump: 0
   charController: {fileID: 73934164466255422}
@@ -245,10 +244,8 @@ MonoBehaviour:
   - {fileID: 5225542054001676890}
   stopMove: 0
   attacked: 0
-  attackedCharged: 0
   hurtBox: {fileID: 845565736}
-  chargedHurtBox: {fileID: 654588822}
-  hasWeapon: 0
+  hasWeapon: 1
   weapon: {fileID: 1437865737192171476}
 --- !u!95 &73934166074147547
 Animator:
@@ -284,6 +281,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forceMagnitude: 1
   playerController: {fileID: 5955562050664704315}
+--- !u!114 &1137475603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73934164466255419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 940a8549ca4818d4ea96abdebc756014, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 1437865737192171476}
+--- !u!136 &1616610539
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73934164466255419}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.39601493
+  m_Height: 1.0155677
+  m_Direction: 1
+  m_Center: {x: 0.00030887127, y: 0.5115705, z: 0.011468649}
 --- !u!1 &73934164949573006
 GameObject:
   m_ObjectHideFlags: 0

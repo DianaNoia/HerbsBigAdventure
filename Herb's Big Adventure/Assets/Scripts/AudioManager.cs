@@ -46,6 +46,16 @@ public class AudioManager : MonoBehaviour
         }
 
         music[musicToPlay].Play();
+
+        // Play the music clip at the specified index
+        if (musicToPlay >= 0 && musicToPlay < music.Length)
+        {
+            music[musicToPlay].Play();
+        }
+        else
+        {
+            Debug.LogWarning("Invalid music index: " + musicToPlay);
+        }
     }
 
     public void PlaySFX(int sfxToPlay)

@@ -61,6 +61,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 1
+  pickupEffect: {fileID: 5572311104299733963, guid: 8c54fa68fd5897c40849c248b7f3a707, type: 3}
   soundToPlay: 9
 --- !u!95 &4727374117550079044
 Animator:

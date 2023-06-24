@@ -100,7 +100,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Collect BOLTS\n for points"
+  m_text: 'Collect secret
+
+    GOLDEN BOLTS'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -195,7 +197,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3746910897096992284}
-  m_LocalRotation: {x: -0, y: 0.90869343, z: -0, w: 0.41746405}
+  m_LocalRotation: {x: 0, y: 0.908694, z: 0, w: 0.41746274}
   m_LocalPosition: {x: 4.18, y: -1.1436208, z: 25.77}
   m_LocalScale: {x: 1.2740002, y: 1.274, z: 1.2740002}
   m_ConstrainProportionsScale: 1
@@ -268,7 +270,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 82c7f1d53bd406141ab9b5ad29aa6003, type: 2}
+  - {fileID: 2100000, guid: 18aa9ac7375f5e34b9bb231234cee08d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -399,7 +401,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7449550667477883103, guid: 65341ea6337386d49a98b717fc57fa7a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 65341ea6337386d49a98b717fc57fa7a, type: 3}
 --- !u!224 &2151802101212066368 stripped
 RectTransform:

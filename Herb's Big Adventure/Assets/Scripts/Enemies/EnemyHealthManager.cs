@@ -5,8 +5,11 @@ using UnityEngine;
 public class EnemyHealthManager : MonoBehaviour
 {
     private PlayerController pc;
-    private EnemyController ec;
+    //private EnemyControllerYellow ecy;
+    //private EnemyControllerRed ecr;
+    //private EnemyControllerPurple ecp;
     private AudioManager am;
+
 
     [SerializeField]
     private EnemyEffects enemyEffects;
@@ -19,13 +22,13 @@ public class EnemyHealthManager : MonoBehaviour
     public int minHealth = 0;
 
     [SerializeField]
-    private int deathSound;
+    private int deathSound, soundToPlay;
 
     [SerializeField]
     private Animator anim;
 
     [SerializeField]
-    private GameObject deathEffect, itemToDrop;
+    public GameObject deathEffect, itemToDrop;
 
     // Start is called before the first frame update
     void Start()
@@ -33,7 +36,9 @@ public class EnemyHealthManager : MonoBehaviour
         currentHealth = maxHealth;
         
         pc = FindObjectOfType<PlayerController>();
-        ec = FindObjectOfType<EnemyController>();
+        //ecy = FindObjectOfType<EnemyControllerYellow>();
+        //ecr = FindObjectOfType<EnemyControllerRed>();
+        //ecp = FindObjectOfType<EnemyControllerPurple>();
         am = FindObjectOfType<AudioManager>();
     }
 
@@ -45,59 +50,28 @@ private void Update()
     // Damage from basic attack
     public void TakeDamageFromAttack()
     {
-        Debug.Log("enemy took damage");
-
-        currentHealth--;
+        currentHealth--; 
         
+        am.PlaySFX(soundToPlay);
+
         if (currentHealth <= 0)
         {
             am.PlaySFX(deathSound);
 
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            
+            Debug.Log("enemy died");
 
+            Destroy(gameObject);
             Instantiate(deathEffect, transform.position + new Vector3(0f, 1.2f, 0f), transform.rotation);
             Instantiate(itemToDrop, transform.position + new Vector3(0f, .5f, 0f), transform.rotation);
         }
-
-        anim.SetTrigger("Take Damage");
+        else
+        {
+            Debug.Log("enemy took damage");
+            anim.SetTrigger("Take Damage");
+        }
     }
-
-    //// Damage from weapon swing
-    //public void TakeDamageWeaponAttack()
-    //{
-    //    currentHealth -= 2;
-    //    ec.anim.SetTrigger("Take Damage");
-
-    //    if (currentHealth <= 0)
-    //    {
-    //        am.PlaySFX(deathSound);
-
-    //        //ec.anim.SetTrigger("Die");
-
-    //        Destroy(gameObject);
-
-    //        Instantiate(deathEffect, transform.position + new Vector3(0f, 1.2f, 0f), transform.rotation);
-    //        Instantiate(itemToDrop, transform.position + new Vector3(0f, .5f, 0f), transform.rotation);
-    //    }
-    //}
-
-    //// Damage from charged attack
-    //public void TakeDamageChargedAttack()
-    //{        
-    //    currentHealth -= 4;
-    //    ec.anim.SetTrigger("Take Damage");
-
-    //    if (currentHealth <= 0)
-    //    {
-    //        am.PlaySFX(deathSound);
-
-    //        Destroy(gameObject);
-
-    //        Instantiate(deathEffect, transform.position + new Vector3(0f, 1.2f, 0f), transform.rotation);
-    //        Instantiate(itemToDrop, transform.position + new Vector3(0f, .5f, 0f), transform.rotation);
-    //    }
-    //}
-
 
     // Checks if the player hurtbox is colliding
     private void OnTriggerEnter(Collider other)
